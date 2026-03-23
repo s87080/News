@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.NewsPages.Home"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource BgColor}"
+             Title="Home">
+
+    <!--MAIN SECTION-->
+
+  <ScrollView>
+    <Grid>
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="15" RowSpacing="10">
+            <Frame CornerRadius="25"
+                   Grid.Row="0"
+                    BackgroundColor="{StaticResource SearchBg}"
+                    Padding="8,8"
+                    HasShadow="False"
+                    Margin="10,0">
+
+                <Grid ColumnDefinitions="Auto,*"
+                      VerticalOptions="Center">
+
+                <!-- SEARCH ICON -->
+                    <Image Source="search.png"
+                            WidthRequest="20"
+                            HeightRequest="20"
+                            VerticalOptions="Center"
+                            Margin="5,0"/>
+
+                <!-- SEARCH ENTRY -->
+                    <Entry Grid.Column="1"
+                            Placeholder="Search city..."
+                            BackgroundColor="Transparent"
+                            FontSize="16"
+                            Margin="10,0,0,0"/>
+
+                </Grid>
+
+
+            </Frame>
+            
+            <!--TAGS-->
+            <Grid Grid.Row="1" ColumnDefinitions="*,*">
+                <Label Grid.Column="0" Text="Popular Tags" HorizontalOptions="Start" FontSize="18" FontAttributes="Bold"/>
+                <Label Grid.Column="1" Text="View all" HorizontalOptions="End" FontSize="14" FontAttributes="Bold" TextColor="{StaticResource News}"/>
+            </Grid>
+            
+            <!--HASTAGS-->
+            <CollectionView Grid.Row="2"
+                x:Name="HasData"
+                >
+
+                <!-- THIS is the important part -->
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout 
+                    Orientation="Vertical"
+                    Span="3" />
+                    <!-- adjust for how many per row -->
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <!--HASTAGS--> 
+                        <Frame
+                                Padding="0,6"
+                                Margin="6,5,6,6"
+                                BackgroundColor="{StaticResource SearchBg}"
+                                CornerRadius="20"
+                                HasShadow="False">
+
+                            <Label
+                                Text="{Binding HastagsName}"
+                                FontSize="12"
+                                TextColor="#555" HorizontalOptions="Center" />
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+            <Grid Grid.Row="3" ColumnDefinitions="*,*">
+                <Label Text="Latest News" FontAttributes="Bold" FontSize="18" HorizontalOptions="Start"/>
+                <Label Grid.Column="1" Text="View all" HorizontalOptions="End" FontSize="14" FontAttributes="Bold" TextColor="{StaticResource News}"/>
+
+            </Grid>
+
+            <CollectionView 
+                           Grid.Row="4"
+                           x:Name="NewsData"
+                           ItemsLayout="HorizontalList"
+                           HeightRequest="250">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Frame
+                               WidthRequest="280"
+                               Margin="10,0"
+                               Padding="0"
+                               CornerRadius="20"
+                               HasShadow="False"
+                               BackgroundColor="{StaticResource SearchBg}">
+
+                            <!-- GRID START -->
+                            <Grid RowDefinitions="Auto,Auto,Auto">
+
+                                <!-- Image -->
+                                <Grid Grid.Row="0">
+                                    <Image 
+                                           Source="{Binding Image}"
+                                           Aspect="AspectFill"
+                                           HeightRequest="140"/>
+                                </Grid>
+
+                                <!-- Title -->
+                                <Label
+                                      Grid.Row="1"
+                                      Text="{Binding Title}"
+                                      FontSize="15"
+                                      FontAttributes="Bold"
+                                      TextColor="#333"
+                                      LineBreakMode="WordWrap"
+                                      Margin="10,5,10,0"/>
+
+                                <!-- Channel -->
+                                <Label
+                                      Grid.Row="2"
+                                      Text="{Binding Channels}"
+                                      FontSize="12"
+                                      TextColor="{StaticResource News}"
+                                      Margin="10,0,10,10"/>
+
+                            </Grid>
+                            <!-- GRID END -->
+
+                        </Frame>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+            <Grid Grid.Row="5" ColumnDefinitions="*,*">
+                <Label Text="Recomendation topics" FontAttributes="Bold" FontSize="16"/>
+                <Label Grid.Column="1" Text="View all" TextColor="{StaticResource News}" HorizontalOptions="End" FontAttributes="Bold" FontSize="14"/>
+            </Grid>
+
+            <Grid Grid.Row="6">
+                <CollectionView Grid.Row="6" x:Name="topics">
+                    <!-- THIS is the important part -->
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout 
+                            Orientation="Vertical"
+                            Span="1" />
+                        <!-- adjust for how many per row -->
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            
+                                <!--RECOMEND TOPICS-->
+                                <Frame
+                                        Margin="10,5"
+                                        Padding="10"
+                                        CornerRadius="15"
+                                        HasShadow="False"
+                                        BackgroundColor="{StaticResource SearchBg}">
+
+                                    <!-- MAIN GRID -->
+                                    <Grid ColumnDefinitions="*,100" ColumnSpacing="8">
+
+                                            <!-- LEFT CONTENT -->
+                                        <Grid Grid.Column="0" RowDefinitions="*,Auto">
+
+                                               <!-- Title -->
+                                               <Label 
+                                               Text="{Binding Title}"
+                                               FontSize="16"
+                                               FontAttributes="Bold"
+                                               TextColor="#333"
+                                               LineBreakMode="WordWrap"
+                                              />
+
+                                            <!-- Channel -->
+                                            <Grid Grid.Row="1">
+
+                                                   <Label
+                                                   Text="{Binding Channel}"
+                                                   FontSize="13"
+                                                   TextColor="{StaticResource News}"
+                                                   />
+
+
+
+                                            </Grid>
+
+                                        </Grid>
+
+                                        <!-- RIGHT IMAGE -->
+                                        <Frame
+                                               Grid.Column="1"
+                                               Padding="0"
+                                               CornerRadius="10"
+                                               HeightRequest="80"
+                                               WidthRequest="100"
+                                               HasShadow="False">
+
+                                                    <Image
+                                                    Source="{Binding Image}"
+                                                    Aspect="AspectFill"/>
+                                        </Frame>
+                                    </Grid>
+                                </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+                
+            </Grid>
+            
+        </Grid>
+    </Grid>
+      
+
+    
+          
+   
+  </ScrollView>
+</ContentPage>

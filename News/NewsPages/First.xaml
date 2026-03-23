@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.NewsPages.First"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource BgColor}"
+             Title="First"
+             Shell.TabBarIsVisible="False">
+    
+
+    <Grid RowDefinitions="Auto,Auto,Auto"
+          VerticalOptions="Center">
+
+        <!-- TOP SECTION -->
+        <Grid Grid.Row="0"
+              ColumnDefinitions="Auto,Auto,Auto"
+              HorizontalOptions="Center"
+              VerticalOptions="Center">
+
+            <!-- IMAGE -->
+            <Image Source="nw.png"
+                   Grid.Column="0"
+                   HeightRequest="200"
+                   VerticalOptions="Center"
+                   Margin="-20,0,0,0"/>
+
+            <!-- NEWS TEXT -->
+            <Label Grid.Column="1"
+                   Text="News"
+                   TextColor="{StaticResource News}"
+                   VerticalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="50"
+                   Margin="-20,0,0,0"/>
+
+            <!-- WATCH TEXT -->
+            <Label Grid.Column="2"
+                   Text="Watch"
+                   TextColor="{StaticResource Watch}"
+                   VerticalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="50"/>
+
+        </Grid>
+
+        <!-- DESCRIPTION -->
+        <Label Grid.Row="1"
+               Text="All type of news all trusted sources for all type of people"
+               Margin="20,-35,20,0"
+               FontSize="12"
+               HorizontalTextAlignment="Center"/>
+
+        <!-- GET STARTED BUTTON -->
+        <Button Grid.Row="2"
+                Text="Get Started"
+                BackgroundColor="{StaticResource News}"
+                TextColor="{StaticResource TabUnselected}"
+                FontSize="20"
+                FontAttributes="Bold"
+                CornerRadius="30"
+                HeightRequest="60"
+                WidthRequest="150"
+                HorizontalOptions="Center"
+                Margin="0,20,0,0"
+                Clicked="GetStarted">
+
+            <Button.Shadow>
+                <Shadow Brush="#40000000"
+                        Offset="0,5"
+                        Radius="10"
+                        Opacity="0.8"/>
+            </Button.Shadow>
+
+        </Button>
+
+    </Grid>
+
+</ContentPage>

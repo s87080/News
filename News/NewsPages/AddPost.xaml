@@ -1,0 +1,123 @@
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="News.NewsPages.AddPost"
+    BackgroundColor="#F5F5F5">
+
+    <ScrollView>
+        <Grid Padding="15" RowSpacing="20">
+
+            <!-- Rows -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+            <Grid>
+                <Frame
+                       WidthRequest="300"
+                       HeightRequest="200"
+                       CornerRadius="12"
+                       BackgroundColor="{StaticResource labelBg}"
+                       HasShadow="True"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center">
+
+                    <Grid RowDefinitions="Auto,Auto"
+                          RowSpacing="10"
+                          VerticalOptions="Center"
+                          HorizontalOptions="Center">
+
+                        <!-- Plus Icon -->
+                        <Label Grid.Row="0"
+                               Text="+"
+                               FontSize="40"
+                               TextColor="#777777"
+                               HorizontalOptions="Center" />
+
+                        <!-- Text -->
+                        <Label Grid.Row="1"
+                               Text="Add Post Images"
+                               FontSize="14"
+                               TextColor="#555555"
+                               HorizontalOptions="Center" />
+
+                    </Grid>
+
+                </Frame>
+            </Grid>
+
+            <!-- Heading -->
+            <Frame Grid.Row="1" CornerRadius="20" Padding="0" BackgroundColor="{StaticResource TabUnselected}">
+                <Entry Placeholder="Add Heading"
+                       HeightRequest="45"
+                       Margin="10,0"/>
+            </Frame>
+
+            <!-- Tag -->
+            <Frame Grid.Row="2" CornerRadius="20" Padding="0" BackgroundColor="{StaticResource TabUnselected}">
+                <Grid>
+                    <Entry Placeholder="Add Tag"
+                           HeightRequest="45"
+                           Margin="10,0"/>
+                </Grid>
+            </Frame>
+
+            <!-- Category -->
+            <Frame Grid.Row="3" CornerRadius="20" Padding="0" BackgroundColor="{StaticResource TabUnselected}">
+                <Entry Placeholder="Category"
+                       HeightRequest="45"
+                       Margin="10,0"/>
+            </Frame>
+
+            <!-- Video Link -->
+            <Frame Grid.Row="4" CornerRadius="20" Padding="0" BackgroundColor="{StaticResource TabUnselected}">
+                <Grid>
+                    <Entry Placeholder="Add video link"
+                           HeightRequest="45"
+                           Margin="10,0"/>
+                    <Label Text="▼"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           Margin="0,0,10,0"/>
+                </Grid>
+            </Frame>
+
+            <!-- Editor -->
+            <Frame Grid.Row="5" CornerRadius="20" Padding="10" BackgroundColor="{StaticResource TabUnselected}">
+                <Editor Placeholder="Write Article"
+                        HeightRequest="120"/>
+            </Frame>
+
+            <Button Grid.Row="6"
+                   Text="Post"
+                   BackgroundColor="{StaticResource News}"
+                   TextColor="{StaticResource TabUnselected}"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   CornerRadius="30"
+                   HeightRequest="60"
+                   WidthRequest="150"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,50">
+
+
+                <Button.Shadow>
+                    <Shadow Brush="#40000000"
+                Offset="0,5"
+                Radius="10"
+                Opacity="0.8"/>
+                </Button.Shadow>
+
+            </Button>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

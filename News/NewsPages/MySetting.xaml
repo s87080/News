@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.NewsPages.MySetting"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource BgColor}"
+             Title="MySetting">
+   
+    <!--MAIN GRID-->
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto, Auto" RowSpacing="8" Padding="15">
+        <Label Text="Settings" FontAttributes="Bold" FontSize="18" Padding="0,10"/>
+        <Border Grid.Row="1" Margin="0" Padding="10" BackgroundColor="Transparent" x:Name="MyBorder">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="MyProfile"/>
+            </Border.GestureRecognizers>
+
+            <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+
+                    <Image 
+                          Source="usersss.png" 
+                          Aspect="AspectFit" 
+                          HeightRequest="20"/>
+
+                    <Label 
+                          Grid.Column="1"
+                          Text="Profile" 
+                          TextColor="Black"
+                          VerticalOptions="Center"
+                          Margin="10,0,0,0"/>
+                    <Image 
+                           Source="rightarrow.png" 
+                           Grid.Column="2"
+                        HeightRequest="20"/>
+
+                </Grid>
+
+            </Border>
+
+        <Border Grid.Row="2" Margin="0" Padding="10" BackgroundColor="Transparent">
+
+            <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+
+                <Image 
+              Source="walletmy.png" 
+              Aspect="AspectFit" 
+              HeightRequest="20"/>
+
+                <Label 
+              Grid.Column="1"
+              Text="My Wallet" 
+              TextColor="Black"
+              VerticalOptions="Center"
+              Margin="10,0,0,0"/>
+                <Image 
+               Source="rightarrow.png" 
+               Grid.Column="2"
+               HeightRequest="20"/>
+
+            </Grid>
+
+        </Border>
+
+        <Border Grid.Row="3" Margin="0" Padding="10" BackgroundColor="Transparent">
+
+            <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+
+                <Image 
+              Source="write.png" 
+              Aspect="AspectFit" 
+              HeightRequest="20"/>
+
+                <Label 
+              Grid.Column="1"
+              Text="My Post" 
+              TextColor="Black"
+              VerticalOptions="Center"
+              Margin="10,0,0,0"/>
+                <Image 
+               Source="rightarrow.png" 
+               Grid.Column="2"
+            HeightRequest="20"/>
+
+            </Grid>
+
+        </Border>
+
+        <Border Grid.Row="4" Margin="0" Padding="10" BackgroundColor="Transparent">
+
+            <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+
+                <Image 
+              Source="web.png" 
+              Aspect="AspectFit" 
+              HeightRequest="20"/>
+
+                <Label 
+              Grid.Column="1"
+              Text="Boost You'r Post" 
+              TextColor="Black"
+              VerticalOptions="Center"
+              Margin="10,0,0,0"/>
+                <Image 
+               Source="rightarrow.png" 
+               Grid.Column="2"
+            HeightRequest="20"/>
+
+            </Grid>
+
+        </Border>
+
+        <Border Grid.Row="5" Margin="0" Padding="10" BackgroundColor="Transparent">
+
+            <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+
+                <Image 
+                       Source="notification.png" 
+                       Aspect="AspectFit" 
+                       HeightRequest="20"/>
+
+                <Label 
+                       Grid.Column="1"
+                       Text="Notifications" 
+                       TextColor="Black"
+                       VerticalOptions="Center"
+                       Margin="10,0,0,0"/>
+                <Image 
+                     Source="rightarrow.png" 
+                     Grid.Column="2"
+                     HeightRequest="20"/>
+
+            </Grid>
+
+        </Border>
+
+        <Border Grid.Row="6" Margin="0" Padding="10" BackgroundColor="Transparent">
+
+            <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+
+                <Image 
+                       Source="conditions.png" 
+                       Aspect="AspectFit" 
+                       HeightRequest="20"/>
+
+                <Label 
+                       Grid.Column="1"
+                       Text="Terms and Conditions" 
+                       TextColor="Black"
+                       VerticalOptions="Center"
+                       Margin="10,0,0,0"/>
+                <Image 
+                       Source="rightarrow.png" 
+                       Grid.Column="2"
+                       HeightRequest="20"/>
+
+            </Grid>
+
+        </Border>
+
+        <Border Grid.Row="7" Margin="0" Padding="10" BackgroundColor="Transparent">
+
+            <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+
+                <Image 
+                      Source="question.png" 
+                      Aspect="AspectFit" 
+                      HeightRequest="20"/>
+
+                <Label 
+                      Grid.Column="1"
+                      Text="About" 
+                      TextColor="Black"
+                      VerticalOptions="Center"
+                      Margin="10,0,0,0"/>
+                <Image 
+                      Source="rightarrow.png" 
+                      Grid.Column="2"
+                      HeightRequest="20"/>
+
+            </Grid>
+
+        </Border>
+
+        <Border Grid.Row="8" Margin="0" Padding="10" BackgroundColor="Transparent">
+
+            <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+
+                <Image 
+                      Source="star.png" 
+                      Aspect="AspectFit" 
+                      HeightRequest="20"/>
+
+                <Label 
+                      Grid.Column="1"
+                      Text="Watch Ads and Earn" 
+                      TextColor="Black"
+                      VerticalOptions="Center"
+                      Margin="10,0,0,0"/>
+                <Image 
+                      Source="rightarrow.png" 
+                      Grid.Column="2"
+                      HeightRequest="20"/>
+
+            </Grid>
+
+        </Border>
+
+        <Border Grid.Row="9" Margin="0" Padding="10" BackgroundColor="Transparent">
+
+            <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+
+                <Image 
+                      Source="refer.png" 
+                      Aspect="AspectFit" 
+                      HeightRequest="20"/>
+
+                <Label 
+                      Grid.Column="1"
+                      Text="Refer and Earn" 
+                      TextColor="Black"
+                      VerticalOptions="Center"
+                      Margin="10,0,0,0"/>
+                <Image 
+                      Source="rightarrow.png" 
+                      Grid.Column="2"
+                      HeightRequest="20"/>
+
+            </Grid>
+
+        </Border>
+
+        <Border Grid.Row="10" Margin="0" Padding="10" BackgroundColor="Transparent">
+
+            <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+
+
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="logutpage"/>
+                </Grid.GestureRecognizers>
+                <Image Grid.Column="0"
+                      Source="logout.png" 
+                      Aspect="AspectFit" 
+                      HeightRequest="20"/>
+
+                <Label 
+                      Grid.Column="1"
+                      Text="Logout" 
+                      TextColor="Black"
+                      VerticalOptions="Center"
+                      Margin="10,0,0,0"/>
+                <Image 
+                       Source="rightarrow.png" 
+                       Grid.Column="2"
+                       HeightRequest="20"/>
+
+            </Grid>
+            
+
+
+        </Border>
+
+
+
+
+
+    </Grid>
+</ContentPage>

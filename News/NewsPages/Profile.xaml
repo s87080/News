@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.NewsPages.Profile"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             BackgroundColor="{StaticResource BgColor}"
+             Title="Profile">
+
+
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="10,15,0,0">
+
+        <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,*" Grid.Row="0">
+            <Image Source="leftarrow.png" Grid.Column="0" HeightRequest="20"  Grid.Row="0"/>
+            <Label Text="Profile" Grid.Column="1" HorizontalOptions="Center" FontAttributes="Bold" FontSize="18"  Grid.Row="0"/>
+
+            <Border Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Margin="0,12,0,0"
+                    StrokeThickness="0">
+
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                            Opacity="0.4"
+                            Radius="5"
+                            Offset="0,2" />
+                </Border.Shadow>
+
+                <BoxView HeightRequest="1"
+                         Color="#E0E0E0" />
+
+            </Border>
+        </Grid>
+
+        <Image Grid.Row="1" Margin="0,15" Source="profile.png" HeightRequest="100" HorizontalOptions="Center"/>
+        <Label Grid.Row="2" Text="Change Profile Photo" TextColor="{StaticResource News}" HorizontalOptions="Center" Margin="0,-10,0,0"/>
+        <Grid Grid.Row="3"
+              RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+              Padding="10,0"
+              RowSpacing="0">
+
+            <Frame Padding="10,0" CornerRadius="20" BackgroundColor="{StaticResource SearchBg}" Margin="0,20,0,20">
+                <Entry Placeholder="Username"
+                       FontSize="16"
+                />
+            </Frame>
+            <Frame Grid.Row="1" Padding="10,0" CornerRadius="20" BackgroundColor="{StaticResource SearchBg}" Margin="0,0,0,20">
+                <Entry Placeholder="First Name"
+                       FontSize="16"
+                />
+            </Frame>
+            <Frame Grid.Row="2" Padding="10,0" CornerRadius="20" BackgroundColor="{StaticResource SearchBg}" Margin="0,0,0,20">
+                <Entry Placeholder="Last Name"
+                       FontSize="16"
+                />
+            </Frame>
+            <Frame Grid.Row="3" Padding="10,0" CornerRadius="20" BackgroundColor="{StaticResource SearchBg}" Margin="0,0,0,20">
+                <Entry Placeholder="Email"
+                       FontSize="16"
+                />
+            </Frame>
+            <Frame Grid.Row="4" Padding="10,0" CornerRadius="20" BackgroundColor="{StaticResource SearchBg}" Margin="0,0,0,20">
+                <Entry Placeholder="Change Password"
+                       FontSize="16"
+                />
+            </Frame>        
+                         
+            
+        </Grid>
+        <Label Grid.Row="4" Padding="10,0,0,10" FontSize="15" Text="I am a"/>
+        <HorizontalStackLayout Grid.Row="5"
+                               Padding="0,-15,0,0" 
+                               Spacing="10">
+
+            <RadioButton Content="Media Reporter"
+                         GroupName="UserType"
+                         IsChecked="True"
+                         FontSize="16"
+                         TextColor="Black"/>
+
+            <RadioButton Content="Visitor"
+                         GroupName="UserType"
+                         FontSize="16"
+                         TextColor="Black"/>
+        </HorizontalStackLayout>
+        <Label Grid.Row="6" Text="Upload Media Documents" FontSize="15" Padding="10,10,0,0"/>
+        <Button Grid.Row="7"
+                Margin="10,10,0,0"
+                Text="Browser File"
+                BackgroundColor="Transparent"
+                TextColor="{StaticResource News}"
+                BorderColor="{StaticResource News}"
+                BorderWidth="2"
+                CornerRadius="20"
+                Padding="20,5"
+                HorizontalOptions="Start"/>
+
+    </Grid>
+
+   
+</ContentPage>

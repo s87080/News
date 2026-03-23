@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.NewsPages.SignUp"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             BackgroundColor="{StaticResource BgColor}"
+             Title="SignUp">
+    <VerticalStackLayout>
+        <Grid 
+              ColumnDefinitions="Auto,Auto,Auto"
+              HorizontalOptions="Center"
+              VerticalOptions="Center">
+
+            <!-- IMAGE -->
+            <Image Source="nw.png"
+            Grid.Column="0"
+            HeightRequest="120"
+            VerticalOptions="Center"
+            Margin="0,0,0,0"/>
+
+            <!-- NEWS TEXT -->
+            <Label Grid.Column="1"
+            Text="News"
+            TextColor="{StaticResource News}"
+            VerticalOptions="Center"
+            FontAttributes="Bold"
+            FontSize="30"
+            Margin="-15,0,0,0"/>
+
+            <!-- WATCH TEXT -->
+            <Label Grid.Column="2"
+            Text="Watch"
+            TextColor="{StaticResource Watch}"
+            VerticalOptions="Center"
+            FontAttributes="Bold"
+            FontSize="30"/>
+
+        </Grid>
+
+        <Grid RowDefinitions="Auto,Auto">
+        
+        <Grid Grid.Row="0"
+              RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+              Padding="30,0"
+              RowSpacing="35"> 
+            <!-- USERNAME -->
+            <Entry Grid.Row="0" 
+                   Placeholder="Username"
+                   FontSize="16"
+                   BackgroundColor="Transparent"/>
+           
+            <!-- EMAIL -->
+            <Entry 
+                   Grid.Row="1"
+                   Placeholder="Email"
+                   Keyboard="Email"
+                   FontSize="16"
+                   BackgroundColor="Transparent"/>
+           
+            <!-- PHONE -->
+            <Entry Grid.Row="2"
+                   Text="+91 "
+                   Keyboard="Telephone"
+                   FontSize="16"
+                   BackgroundColor="Transparent"/>
+           
+
+            <!-- PASSWORD -->
+            <Entry Grid.Row="3" 
+                   Placeholder="Password"
+                   IsPassword="True"
+                   FontSize="16"
+                   BackgroundColor="Transparent"/>
+            
+            <!--I AM-->
+            <Label Grid.Row="4"
+                   Padding="0,0,0,0"
+                   Text=" I  am  a"
+                   FontSize="18"/>
+            
+            <!--RADIO BUTTON-->
+                <HorizontalStackLayout Grid.Row="5"
+                                       Padding="0,-15,0,0" >
+                
+                <RadioButton Content="Media Reporter"
+                             GroupName="UserType"
+                             IsChecked="True"
+                             FontSize="16"
+                             TextColor="Black"/>
+
+                <RadioButton Content="Visitor"
+                             GroupName="UserType"
+                             FontSize="16"
+                             TextColor="Black"/>
+                </HorizontalStackLayout>
+
+            <!-- SIGN UP BUTTON -->
+            <Button Grid.Row="6"
+                    Text="Sign Up"
+                    BackgroundColor="{StaticResource News}"
+                    TextColor="{StaticResource labelBg}"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    CornerRadius="30"
+                    HeightRequest="60"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    Margin="0,20,0,0"
+                    Clicked="Sign_In"
+                    >
+
+                <Button.Shadow>
+                    <Shadow Brush="#40000000"
+                  Offset="0,5"
+                  Radius="10"
+                  Opacity="0.8"/>
+                </Button.Shadow>
+
+            </Button>
+
+
+
+
+        </Grid>
+
+            <Grid Grid.Row="1">
+                <VerticalStackLayout Spacing="25" Padding="20">
+
+                    <!-- OR SIGN IN WITH -->
+                    <Grid ColumnDefinitions="*,Auto,*"
+                          VerticalOptions="Center">
+
+                        <BoxView    Grid.Column="0"
+                                    HeightRequest="1"
+                                    BackgroundColor="{StaticResource Grey}"
+                                    VerticalOptions="Center"/>
+
+                        <Label Grid.Column="1"
+                                Text="or sign in with"
+                                Margin="10,0"
+                                FontSize="14"
+                                TextColor="{StaticResource Grey}"/>
+
+                        <BoxView Grid.Column="2"
+                                HeightRequest="1"
+                                BackgroundColor="{StaticResource Grey}"
+                                VerticalOptions="Center"/>
+                    </Grid>
+
+
+                    <!-- SOCIAL ICONS -->
+                    <HorizontalStackLayout
+                        Spacing="18"
+                        HorizontalOptions="Center">
+
+                        <!-- MAIL -->
+                        <Frame WidthRequest="55"
+                                HeightRequest="55"
+                                CornerRadius="12"
+                                BorderColor="{StaticResource Grey}"
+                                BackgroundColor="Transparent"
+                                HasShadow="False"
+                                Padding="12">
+                                <Image Source="email.png"/>
+                        </Frame>
+
+                        <!-- GOOGLE -->
+                        <Frame WidthRequest="55"
+                                HeightRequest="55"
+                                CornerRadius="12"
+                                BorderColor="{StaticResource Grey}"
+                                HasShadow="False"
+                                Padding="12">
+                                <Image Source="google.png"/>
+                        </Frame>
+
+                        <!-- FACEBOOK -->
+                        <Frame WidthRequest="55"
+                                HeightRequest="55"
+                                CornerRadius="12"
+                                BorderColor="{StaticResource Grey}"
+                                HasShadow="False"
+                                Padding="12">
+                                <Image Source="facebook.png"/>
+                        </Frame>
+
+                        <!-- TWITTER -->
+                        <Frame WidthRequest="55"
+                               HeightRequest="55"
+                               CornerRadius="12"
+                               BorderColor="{StaticResource Grey}"
+                               HasShadow="False"
+                               Padding="12">
+                               <Image Source="twitter.png"/>
+                        </Frame>
+
+                        <!-- APPLE -->
+                        <Frame WidthRequest="55"
+                               HeightRequest="55"
+                               CornerRadius="12"
+                               BorderColor="{StaticResource Grey}"
+                               HasShadow="False"
+                               Padding="12">
+                               <Image Source="apple.png"/>
+                        </Frame>
+
+                    </HorizontalStackLayout>
+
+
+                    <!-- TERMS TEXT -->
+                    <Label
+                        HorizontalTextAlignment="Center"
+                        FontSize="13"
+                        TextColor="{StaticResource Grey}">
+
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="By signing up to News24 you are accepting our "/>
+                                <Span Text="Terms And Conditions"
+                                FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+
+                    </Label>
+
+                </VerticalStackLayout>
+            </Grid>
+        
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>

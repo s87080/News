@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup   
+             xmlns:toolkit1="clr-namespace:News.NewsPages" 
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"             
+             x:Class="News.NewsPages.Pop"
+             Color="Transparent"
+             >
+    <Grid BackgroundColor="#80000000" Padding="20" VerticalOptions="Center" HorizontalOptions="Center">
+        <Frame BackgroundColor="White" CornerRadius="10" Padding="20">
+            <StackLayout Spacing="15">
+                <Label Text="Are you sure Logout!" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Button Text="yes" Clicked="OnCloseButtonClicked"/>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</toolkit:Popup>

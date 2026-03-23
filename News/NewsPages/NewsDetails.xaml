@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.NewsPages.NewsDetails"
+             Background="{StaticResource BgColor}"
+             Shell.NavBarIsVisible="False"
+             Title="NewsDetails">
+    <ScrollView>
+    <!--MAIN GRID-->
+    <Grid>
+        <Grid RowDefinitions="Auto,Auto,Auto">
+            
+            <!--NAVIGATION-->
+            <Grid Grid.Row="0" ColumnDefinitions="*,Auto,Auto" Padding="10" ColumnSpacing="20" >
+                <Image Grid.Column="0" Source="leftarrow.png" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="Center"/>
+                <Image Grid.Column="1" Source="saveinstagram.png"  HeightRequest="15" HorizontalOptions="Start" VerticalOptions="Center"/>
+                <Image Grid.Column="2" Source="share.png"  HeightRequest="20" HorizontalOptions="End" VerticalOptions="Center"/>
+                  
+            </Grid>
+
+            <!--1st IMAGE-->
+            <Image Grid.Row="1" Source="dashboardzeenews.png" Margin="0,10"/>
+            
+            <!--2nd MAIN GRID-->
+            <Grid Grid.Row="2" Padding="20" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="10">
+                
+                <!--HEADLINE-->
+                <Label Text="Monarch population soars 4,900 percent since last year in thrilling 2021 western migration"
+                       FontSize="19" FontAttributes="Bold"/>
+                
+                <!--POST-->
+                <Grid Grid.Row="1" ColumnDefinitions="Auto,*,Auto" Padding="0,10,0,0" ColumnSpacing="10">
+
+                    <!--IMAGE-->
+                    <Image Source="enstine.jpg"
+                           HeightRequest="40"
+                           WidthRequest="40"
+                           Aspect="AspectFill">
+           
+
+                        <Image.Clip>
+                            <EllipseGeometry Center="20,20"
+                             RadiusX="20"
+                             RadiusY="20"/>
+                        </Image.Clip>
+
+                    </Image>
+                    
+                    <!--NAME-->
+                    <Label Grid.Column="1" VerticalOptions="Center" Text="By andy corbley"/>
+                    
+                    <!--TIME-->
+                    <Label Grid.Column="2" VerticalOptions="Center" Text="1hr ago"/>
+
+                  
+
+                </Grid>
+               
+                <Grid Grid.Row="2" ColumnDefinitions="*,*,*">
+                    <Grid ColumnDefinitions="Auto,*" Grid.Column="0" HorizontalOptions="Start" ColumnSpacing="8">
+                        <Image Grid.Column="0" Source="chat.png" HeightRequest="15" HorizontalOptions="Start"/>
+                        <Label Text="29 comments" Grid.Column="1"/>
+                    </Grid>
+                    <Grid ColumnDefinitions="Auto,*" Grid.Column="1" HorizontalOptions="Center" ColumnSpacing="8">
+                        <Image Grid.Column="0" Source="like.png" HeightRequest="15" HorizontalOptions="Start"/>
+                        <Label Text="34 likes" Grid.Column="1"/>
+                    </Grid>
+                    <Grid ColumnDefinitions="Auto,*" Grid.Column="2" HorizontalOptions="End" ColumnSpacing="8">
+                        <Image Grid.Column="0" Source="sharefile.png" HeightRequest="15" HorizontalOptions="Start"/>
+                        <Label Text="29 share" Grid.Column="1"/>
+                    </Grid>
+
+
+                </Grid>
+                
+                <!--LINES-->
+                <Label Grid.Row="3" Text="When just 200 Western monarch butterflies arrived in the Pismo Beach Butterfly Grove from their northerly migration last year, park rangers feared the treasured insect would soon be gone forever."/>
+
+                <Label Grid.Row="4" Text="This year, however, volunteers tallied their numbers at over 100,000, a spectacular swarm of hope that traveled down from as far north as Canada to the spend the winter on the California coast."/>
+
+                <Label Grid.Row="5" Text="When just 200 Western monarch butterflies arrived in the Pismo Beach Butterfly Grove from their northerly migration last year, park rangers feared the treasured insect would soon be gone forever."/>
+
+               
+            </Grid>
+
+
+        </Grid>
+        
+    </Grid>
+    </ScrollView>
+</ContentPage>

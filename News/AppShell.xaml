@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="News.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:News"
+    xmlns:NewsPages="clr-namespace:News.NewsPages"
+    Title="News"
+    Shell.TabBarBackgroundColor="{StaticResource TabBg}"
+    Shell.TabBarForegroundColor="{StaticResource News}"
+    Shell.TabBarUnselectedColor="{StaticResource TabUnselected}"
+    Shell.TabBarTitleColor="{StaticResource News}"
+    >
+    
+
+    <TabBar>
+
+        <!-- Home Tab -->
+        <Tab Title="Home" Icon="home.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate NewsPages:First}"
+                Route="HomePage" />
+        </Tab>
+
+        <!-- Ads Tab -->
+        <Tab Title="Ads" Icon="ads.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate NewsPages:Home}"
+                Route="AboutPage" />
+        </Tab>
+        <Tab Title="Add" Icon="add.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate NewsPages:AddPost}"
+                Route="AboutPage" />
+        </Tab>
+        <Tab Title="Post" Icon="conditions.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate NewsPages:NewsDetails}"
+                Route="AboutPage" />
+        </Tab>
+        <Tab Title="Profile" Icon="profile.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate NewsPages:MySetting}"
+                Route="AboutPage" />
+        </Tab>
+
+    </TabBar>
+
+</Shell>

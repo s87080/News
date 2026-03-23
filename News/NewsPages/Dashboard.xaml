@@ -1,0 +1,335 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.NewsPages.Dashboard"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource BgColor}"
+             Title="Dashboard">
+
+    <ScrollView>
+
+        <!-- MAIN GRID -->
+        <Grid Padding="10"
+              RowSpacing="15"
+              RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+
+            <!-- NAVBAR -->
+            <Grid Row="0" ColumnDefinitions="*,Auto">
+
+                <HorizontalStackLayout Spacing="10">
+                    <Image Source="list.png"
+                           WidthRequest="20"
+                           Aspect="AspectFit"/>
+
+                    <Label Text="📌 G.T Road Kolkata"
+                           FontSize="16" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Grid.Column="1" Spacing="10">
+                    <Border StrokeShape="RoundRectangle 15">
+                        <Label Text="⭐ 599"
+                               FontSize="12"
+                               Padding="5" />
+                    </Border>
+
+                    <Label Text="🔔"
+                           VerticalTextAlignment="Center" />
+                </HorizontalStackLayout>
+
+            </Grid>
+
+
+            <!-- CATEGORY -->
+            <ScrollView Grid.Row="1" Orientation="Horizontal">
+                <HorizontalStackLayout Spacing="25">
+
+                    <Label x:Name="Pop" Text="Popular">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Popular" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Label Text="All" />
+                    <Label Text="Politics" />
+                    <Label Text="Tech" />
+                    <Label Text="Health" />
+                    <Label Text="Science" />
+
+                </HorizontalStackLayout>
+            </ScrollView>
+
+
+            <!-- NEWS CARD -->
+            <Grid Grid.Row="2">
+
+                <Border StrokeShape="RoundRectangle 20">
+                    <Image Source="dashboardzeenews.png"
+                           Aspect="AspectFit" />
+                </Border>
+
+                <Label Text="Mohali blast: Police find dump of 7,000 mobile phones..."
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource TabUnselected}"
+                       FontSize="16"
+                       Padding="15"
+                       VerticalOptions="End" />
+
+            </Grid>
+
+
+            <!-- POLL SECTION -->
+            <Grid Grid.Row="3"
+                  RowSpacing="10"
+                  RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+
+                <!-- Question -->
+                <Label Grid.Row="0"
+                       Text="Who is the best player of India Cricket Team ?"
+                       FontAttributes="Bold"
+                       FontSize="18" />
+
+                <!-- Option 1 -->
+                <Frame Grid.Row="1"
+                       BackgroundColor="{StaticResource labelBg}"
+                       CornerRadius="25"
+                       Padding="7">
+
+                    <Grid ColumnDefinitions="Auto,*">
+                        <RadioButton VerticalOptions="Center"/>
+                        <Label Grid.Column="1"
+                               Text="Ms Dhoni"
+                               VerticalOptions="Center" />
+                    </Grid>
+
+                </Frame>
+
+                <!-- Option 2 -->
+                <Frame Grid.Row="2"
+                       BackgroundColor="{StaticResource labelBg}"
+                       CornerRadius="25"
+                       Padding="7">
+
+                    <Grid ColumnDefinitions="Auto,*">
+                        <RadioButton />
+                        <Label Grid.Column="1"
+                               Text="Rohit Sharma"
+                               VerticalOptions="Center"/>
+                    </Grid>
+
+                </Frame>
+
+                <!-- Option 3 -->
+                <Frame Grid.Row="3"
+                       BackgroundColor="{StaticResource labelBg}"
+                       CornerRadius="25"
+                       Padding="7">
+
+                    <Grid ColumnDefinitions="Auto,*">
+                        <RadioButton />
+                        <Label Grid.Column="1"
+                               Text="Virat Kohli"
+                               VerticalOptions="Center" />
+                    </Grid>
+
+                </Frame>
+
+                <!-- BUTTON -->
+                <Button Grid.Row="4"
+                        Text="See Result"
+                        Margin="0,18,0,0"
+                        BackgroundColor="{StaticResource News}"
+                       TextColor="{StaticResource TabUnselected}"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        CornerRadius="30"
+                        HeightRequest="50"
+                        WidthRequest="200"
+                        HorizontalOptions="End"
+                        Clicked="SeeResults">
+
+                    <Button.Shadow>
+                        <Shadow Brush="#40000000"
+                                Offset="0,5"
+                                Radius="10"
+                                Opacity="0.8" />
+                    </Button.Shadow>
+
+                </Button>
+
+            </Grid>
+
+            <!-- Option 4 -->
+            <Grid Grid.Row="4" RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="8">
+                
+                <!--IMAGE SECTION-->
+                <Image Source="relaiablesourses.png" Aspect="AspectFit" Grid.Row="0"></Image>
+                
+                <!--TEXT-->
+                <Label Grid.Row="1" FontAttributes="Bold" FontSize="15" Text="Mohali blast: Police find dump of 7,000 mobile phones, Oppn knocks security lapses"/>
+
+                <!--TEXT-->
+                <Label Grid.Row="2" LineBreakMode="CharacterWrap" Text="Zee News is a well-known Indian news channel that delivers the latest updates from across the country and around the world. It covers a wide range of topics including politics, business, technology, health, and entertainment. Known for its fast reporting and live coverage, Zee News provides real-time breaking news along with detailed analysis to keep viewers informed. Its digital platforms also allow users to access news anytime through articles, videos, and live TV, making it a widely trusted source of information."/>
+            
+                <!--LIKE COMMENT SHARE-->
+                <Grid Grid.Row="3" ColumnDefinitions="*,Auto" Padding="0,8">
+                    <Grid Grid.Column="0" ColumnDefinitions="Auto,Auto,Auto" ColumnSpacing="20" HorizontalOptions="Start">
+                        <!--LIKE-->
+                        <Image Grid.Column="0" Source="love.png" HeightRequest="25"/>
+                        <!--COMMENT-->
+                        <Image Grid.Column="1" Source="comments.png" HeightRequest="25"/>
+                        <!--SHARE-->
+                        <Image Grid.Column="2" Source="next.png" HeightRequest="25"/>
+                    </Grid>
+
+                    <!--COMMENTS & VIEWS-->
+                    <Grid Grid.Column="1" ColumnDefinitions="Auto,Auto" ColumnSpacing="20" HorizontalOptions="End">
+                        <!--COMMENTS-->
+                        <Label Text="99+ comments" Grid.Column="0"/>
+                        <!--VIEWS-->
+                        <Label Text="45k views" Grid.Column="1"/>
+                    </Grid>
+                    
+                </Grid>
+            </Grid>
+
+            <!-- Option 5 -->
+            <Grid Grid.Row="5" RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="8">
+
+                <!--IMAGE SECTION-->
+                <Image Source="relaiablesourses.png" Aspect="AspectFit" Grid.Row="0"></Image>
+
+                <!--TEXT-->
+                <Label Grid.Row="1" FontAttributes="Bold" FontSize="15" Text="Mohali blast: Police find dump of 7,000 mobile phones, Oppn knocks security lapses"/>
+
+                <!--TEXT-->
+                <Label Grid.Row="2" LineBreakMode="CharacterWrap" Text="Zee News is a well-known Indian news channel that delivers the latest updates from across the country and around the world. It covers a wide range of topics including politics, business, technology, health, and entertainment. Known for its fast reporting and live coverage, Zee News provides real-time breaking news along with detailed analysis to keep viewers informed. Its digital platforms also allow users to access news anytime through articles, videos, and live TV, making it a widely trusted source of information."/>
+
+                <!--LIKE COMMENT SHARE-->
+                <Grid Grid.Row="3" ColumnDefinitions="*,Auto" Padding="0,8">
+                    <Grid Grid.Column="0" ColumnDefinitions="Auto,Auto,Auto" ColumnSpacing="20" HorizontalOptions="Start">
+                        <!--LIKE-->
+                        <Image Grid.Column="0" Source="love.png" HeightRequest="25"/>
+                        <!--COMMENT-->
+                        <Image Grid.Column="1" Source="comments.png" HeightRequest="25"/>
+                        <!--SHARE-->
+                        <Image Grid.Column="2" Source="next.png" HeightRequest="25"/>
+                    </Grid>
+
+                    <!--COMMENTS & VIEWS-->
+                    <Grid Grid.Column="1" ColumnDefinitions="Auto,Auto" ColumnSpacing="20" HorizontalOptions="End">
+                        <!--COMMENTS-->
+                        <Label Text="99+ comments" Grid.Column="0"/>
+                        <!--VIEWS-->
+                        <Label Text="45k views" Grid.Column="1"/>
+                    </Grid>
+
+                </Grid>
+            </Grid>
+
+            <!-- Option 6 -->
+            <Grid Grid.Row="6" RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="8">
+
+                <!--IMAGE SECTION-->
+                <Image Source="relaiablesourses.png" Aspect="AspectFit" Grid.Row="0"></Image>
+
+                <!--TEXT-->
+                <Label Grid.Row="1" FontAttributes="Bold" FontSize="15" Text="Mohali blast: Police find dump of 7,000 mobile phones, Oppn knocks security lapses"/>
+
+                <!--TEXT-->
+                <Label Grid.Row="2" LineBreakMode="CharacterWrap" Text="Zee News is a well-known Indian news channel that delivers the latest updates from across the country and around the world. It covers a wide range of topics including politics, business, technology, health, and entertainment. Known for its fast reporting and live coverage, Zee News provides real-time breaking news along with detailed analysis to keep viewers informed. Its digital platforms also allow users to access news anytime through articles, videos, and live TV, making it a widely trusted source of information."/>
+
+                <!--LIKE COMMENT SHARE-->
+                <Grid Grid.Row="3" ColumnDefinitions="*,Auto" Padding="0,8">
+                    <Grid Grid.Column="0" ColumnDefinitions="Auto,Auto,Auto" ColumnSpacing="20" HorizontalOptions="Start">
+                        <!--LIKE-->
+                        <Image Grid.Column="0" Source="love.png" HeightRequest="25"/>
+                        <!--COMMENT-->
+                        <Image Grid.Column="1" Source="comments.png" HeightRequest="25"/>
+                        <!--SHARE-->
+                        <Image Grid.Column="2" Source="next.png" HeightRequest="25"/>
+                    </Grid>
+
+                    <!--COMMENTS & VIEWS-->
+                    <Grid Grid.Column="1" ColumnDefinitions="Auto,Auto" ColumnSpacing="20" HorizontalOptions="End">
+                        <!--COMMENTS-->
+                        <Label Text="99+ comments" Grid.Column="0"/>
+                        <!--VIEWS-->
+                        <Label Text="45k views" Grid.Column="1"/>
+                    </Grid>
+
+                </Grid>
+            </Grid>
+
+            <!-- Option 7 -->
+            <Grid Grid.Row="7" RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="8">
+
+                <!--IMAGE SECTION-->
+                <Image Source="relaiablesourses.png" Aspect="AspectFit" Grid.Row="0"></Image>
+
+                <!--TEXT-->
+                <Label Grid.Row="1" FontAttributes="Bold" FontSize="15" Text="Mohali blast: Police find dump of 7,000 mobile phones, Oppn knocks security lapses"/>
+
+                <!--TEXT-->
+                <Label Grid.Row="2" LineBreakMode="CharacterWrap" Text="Zee News is a well-known Indian news channel that delivers the latest updates from across the country and around the world. It covers a wide range of topics including politics, business, technology, health, and entertainment. Known for its fast reporting and live coverage, Zee News provides real-time breaking news along with detailed analysis to keep viewers informed. Its digital platforms also allow users to access news anytime through articles, videos, and live TV, making it a widely trusted source of information."/>
+
+                <!--LIKE COMMENT SHARE-->
+                <Grid Grid.Row="3" ColumnDefinitions="*,Auto" Padding="0,8">
+                    <Grid Grid.Column="0" ColumnDefinitions="Auto,Auto,Auto" ColumnSpacing="20" HorizontalOptions="Start">
+                        <!--LIKE-->
+                        <Image Grid.Column="0" Source="love.png" HeightRequest="25"/>
+                        <!--COMMENT-->
+                        <Image Grid.Column="1" Source="comments.png" HeightRequest="25"/>
+                        <!--SHARE-->
+                        <Image Grid.Column="2" Source="next.png" HeightRequest="25"/>
+                    </Grid>
+
+                    <!--COMMENTS & VIEWS-->
+                    <Grid Grid.Column="1" ColumnDefinitions="Auto,Auto" ColumnSpacing="20" HorizontalOptions="End">
+                        <!--COMMENTS-->
+                        <Label Text="99+ comments" Grid.Column="0"/>
+                        <!--VIEWS-->
+                        <Label Text="45k views" Grid.Column="1"/>
+                    </Grid>
+
+                </Grid>
+            </Grid>
+
+
+            <!-- Option 8 -->
+            <Grid Grid.Row="8" RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="8">
+
+                <!--IMAGE SECTION-->
+                <Image Source="relaiablesourses.png" Aspect="AspectFit" Grid.Row="0"></Image>
+
+                <!--TEXT-->
+                <Label Grid.Row="1" FontAttributes="Bold" FontSize="15" Text="Mohali blast: Police find dump of 7,000 mobile phones, Oppn knocks security lapses"/>
+
+                <!--TEXT-->
+                <Label Grid.Row="2" LineBreakMode="CharacterWrap" Text="Zee News is a well-known Indian news channel that delivers the latest updates from across the country and around the world. It covers a wide range of topics including politics, business, technology, health, and entertainment. Known for its fast reporting and live coverage, Zee News provides real-time breaking news along with detailed analysis to keep viewers informed. Its digital platforms also allow users to access news anytime through articles, videos, and live TV, making it a widely trusted source of information."/>
+
+                <!--LIKE COMMENT SHARE-->
+                <Grid Grid.Row="3" ColumnDefinitions="*,Auto" Padding="0,8">
+                    <Grid Grid.Column="0" ColumnDefinitions="Auto,Auto,Auto" ColumnSpacing="20" HorizontalOptions="Start">
+                        <!--LIKE-->
+                        <Image Grid.Column="0" Source="love.png" HeightRequest="25"/>
+                        <!--COMMENT-->
+                        <Image Grid.Column="1" Source="comments.png" HeightRequest="25"/>
+                        <!--SHARE-->
+                        <Image Grid.Column="2" Source="next.png" HeightRequest="25"/>
+                    </Grid>
+
+                    <!--COMMENTS & VIEWS-->
+                    <Grid Grid.Column="1" ColumnDefinitions="Auto,Auto" ColumnSpacing="20" HorizontalOptions="End">
+                        <!--COMMENTS-->
+                        <Label Text="99+ comments" Grid.Column="0"/>
+                        <!--VIEWS-->
+                        <Label Text="45k views" Grid.Column="1"/>
+                    </Grid>
+
+                </Grid>
+            </Grid>
+
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

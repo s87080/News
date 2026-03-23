@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.NewsPages.VerifyPage"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             BackgroundColor="{StaticResource BgColor}"
+             Title="VerifyPage">
+    
+    <Grid RowDefinitions="Auto,Auto">
+            
+            <Grid Grid.Row="0"
+                  ColumnDefinitions="Auto,Auto,Auto"
+                  HorizontalOptions="Center"
+                  VerticalOptions="Center">
+
+                <!-- IMAGE -->
+                <Image Source="nw.png"
+                       Grid.Column="0"
+                       HeightRequest="120"
+                       VerticalOptions="Center"
+                       Margin="0,0,0,0"/>
+
+                <!-- NEWS TEXT -->
+                <Label Grid.Column="1"
+                       Text="News"
+                       TextColor="{StaticResource News}"
+                       VerticalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="30"
+                       Margin="-15,0,0,0"/>
+
+                <!-- WATCH TEXT -->
+                <Label Grid.Column="2"
+                       Text="Watch"
+                       TextColor="{StaticResource Watch}"
+                       VerticalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="30"/>
+
+            </Grid>
+
+        <Grid Grid.Row="1"
+                  RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+                  Padding="30,0"
+                  RowSpacing="35">
+            
+            <!-- EMAIL -->
+            <Grid RowDefinitions="Auto,Auto">
+
+                <Label Text="Enter You'r Email"
+                       Grid.Row="0"/>
+                <Entry Grid.Row="1" 
+                        Placeholder="Email"
+                        FontSize="16"
+                        BackgroundColor="Transparent"/>
+            
+            </Grid>
+            
+            <!-- VERIFICATION CODE -->
+            <Grid RowDefinitions="Auto,Auto"
+                 Grid.Row="1">
+
+                <Label Text="Verification Code"
+                       Grid.Row="0"/>
+                <Entry Grid.Row="1" 
+                        Placeholder="Email"
+                        FontSize="16"
+                        BackgroundColor="Transparent"/>
+            
+            </Grid>
+            
+            <!-- PASSWORD -->
+            <Grid RowDefinitions="Auto,Auto"
+                 Grid.Row="2">
+
+                <Label Text="New Password"
+                       Grid.Row="0"/>
+                <Entry Grid.Row="1" 
+                        Placeholder="Email"
+                        FontSize="16"
+                        BackgroundColor="Transparent"/>
+            
+            </Grid>
+            
+            <!-- RE ENTER YOUR PASSWORD -->
+            <Grid RowDefinitions="Auto,Auto"
+                 Grid.Row="3">
+
+                <Label Text="Re Enter Your Password"
+                       Grid.Row="0"/>
+                <Entry Grid.Row="1" 
+                        Placeholder="Email"
+                        FontSize="16"
+                        BackgroundColor="Transparent"/>
+            
+            </Grid>
+            
+            <!--SIGN IN-->
+            <Button Grid.Row="4"
+                    Text="Select City"
+                    BackgroundColor="{StaticResource News}"
+                    TextColor="{StaticResource TabUnselected}"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    CornerRadius="30"
+                    HeightRequest="60"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    Margin="0,20,0,0"
+                    Clicked="City"
+                    >
+
+                <Button.Shadow>
+                    <Shadow Brush="#40000000"
+                    Offset="0,5"
+                    Radius="10"
+                    Opacity="0.8"/>
+                </Button.Shadow>
+
+            </Button>
+
+
+
+        </Grid>
+    </Grid>
+    
+</ContentPage>
