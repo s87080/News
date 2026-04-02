@@ -18,7 +18,7 @@
         <!-- Home Tab -->
         <Tab Title="Home" Icon="home.png">
             <ShellContent
-                ContentTemplate="{DataTemplate NewsPages:First}"
+                ContentTemplate="{DataTemplate NewsPages:Dashboard}"
                 Route="HomePage" />
         </Tab>
 

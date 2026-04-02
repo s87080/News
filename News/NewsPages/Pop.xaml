@@ -7,11 +7,12 @@
              x:Class="News.NewsPages.Pop"
              Color="Transparent"
              >
-    <Grid BackgroundColor="#80000000" Padding="20" VerticalOptions="Center" HorizontalOptions="Center">
+    <Grid Padding="20" VerticalOptions="Center" HorizontalOptions="Center">
         <Frame BackgroundColor="White" CornerRadius="10" Padding="20">
             <StackLayout Spacing="15">
-                <Label Text="Are you sure Logout!" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
-                <Button Text="yes" Clicked="OnCloseButtonClicked"/>
+                <Label Text = "Are you sure Logout!" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" TextColor="{StaticResource Black}"
+                       />
+                <Button Text ="yes" Clicked="OnCloseButtonClicked" BackgroundColor="{StaticResource News}"/>
             </StackLayout>
         </Frame>
     </Grid>

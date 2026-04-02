@@ -11,8 +11,13 @@
     <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="10,15,0,0">
 
         <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,*" Grid.Row="0">
-            <Image Source="leftarrow.png" Grid.Column="0" HeightRequest="20"  Grid.Row="0"/>
-            <Label Text="Profile" Grid.Column="1" HorizontalOptions="Center" FontAttributes="Bold" FontSize="18"  Grid.Row="0"/>
+            <Image Source="leftarrow.png" Grid.Column="0" HeightRequest="20"  Grid.Row="0">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnArrowTapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Label TextColor="{StaticResource Black}"  Text="Profile" Grid.Column="1" HorizontalOptions="Center" FontAttributes="Bold" FontSize="18"  Grid.Row="0"/>
 
             <Border Grid.Row="1"
                     Grid.ColumnSpan="2"
@@ -67,7 +72,7 @@
                          
             
         </Grid>
-        <Label Grid.Row="4" Padding="10,0,0,10" FontSize="15" Text="I am a"/>
+        <Label TextColor="{StaticResource Black}"  Grid.Row="4" Padding="10,0,0,10" FontSize="15" Text="I am a"/>
         <HorizontalStackLayout Grid.Row="5"
                                Padding="0,-15,0,0" 
                                Spacing="10">
@@ -83,7 +88,7 @@
                          FontSize="16"
                          TextColor="Black"/>
         </HorizontalStackLayout>
-        <Label Grid.Row="6" Text="Upload Media Documents" FontSize="15" Padding="10,10,0,0"/>
+        <Label Grid.Row="6" TextColor="{StaticResource Black}"  Text="Upload Media Documents" FontSize="15" Padding="10,10,0,0"/>
         <Button Grid.Row="7"
                 Margin="10,10,0,0"
                 Text="Browser File"

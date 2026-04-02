@@ -5,7 +5,8 @@
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False"
              BackgroundColor="{StaticResource BgColor}"
-             Title="SignUp">
+             Title="SignUp"
+             NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout>
         <Grid 
               ColumnDefinitions="Auto,Auto,Auto"
@@ -45,13 +46,14 @@
               Padding="30,0"
               RowSpacing="35"> 
             <!-- USERNAME -->
-            <Entry Grid.Row="0" 
+            <Entry x:Name="name"
+                   Grid.Row="0" 
                    Placeholder="Username"
                    FontSize="16"
                    BackgroundColor="Transparent"/>
            
             <!-- EMAIL -->
-            <Entry 
+                <Entry x:Name="email"
                    Grid.Row="1"
                    Placeholder="Email"
                    Keyboard="Email"
@@ -59,7 +61,8 @@
                    BackgroundColor="Transparent"/>
            
             <!-- PHONE -->
-            <Entry Grid.Row="2"
+                <Entry x:Name="phone"
+                   Grid.Row="2"
                    Text="+91 "
                    Keyboard="Telephone"
                    FontSize="16"
@@ -67,7 +70,8 @@
            
 
             <!-- PASSWORD -->
-            <Entry Grid.Row="3" 
+                <Entry x:Name="password"
+                    Grid.Row="3" 
                    Placeholder="Password"
                    IsPassword="True"
                    FontSize="16"

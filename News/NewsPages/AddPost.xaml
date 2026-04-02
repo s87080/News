@@ -2,24 +2,15 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="News.NewsPages.AddPost"
-    BackgroundColor="#F5F5F5">
+    BackgroundColor="{StaticResource BgColor}">
 
     <ScrollView>
-        <Grid Padding="15" RowSpacing="20">
+        <Grid Padding="15"
+              RowSpacing="20"
+              RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto">
 
-            <!-- Rows -->
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-
-
-            <Grid>
+            <!-- 🔷 IMAGE PICKER -->
+            <Grid Grid.Row="0">
                 <Frame
                        WidthRequest="300"
                        HeightRequest="200"
@@ -53,35 +44,46 @@
                 </Frame>
             </Grid>
 
-            <!-- Heading -->
-            <Frame Grid.Row="1" CornerRadius="20" Padding="0" BackgroundColor="{StaticResource TabUnselected}">
+            <!-- 🔷 HEADING -->
+            <Frame Grid.Row="1"
+                   CornerRadius="20"
+                   Padding="0"
+                   BackgroundColor="{StaticResource TabUnselected}">
                 <Entry Placeholder="Add Heading"
                        HeightRequest="45"
                        Margin="10,0"/>
             </Frame>
 
-            <!-- Tag -->
-            <Frame Grid.Row="2" CornerRadius="20" Padding="0" BackgroundColor="{StaticResource TabUnselected}">
-                <Grid>
-                    <Entry Placeholder="Add Tag"
-                           HeightRequest="45"
-                           Margin="10,0"/>
-                </Grid>
+            <!-- 🔷 TAG -->
+            <Frame Grid.Row="2"
+                   CornerRadius="20"
+                   Padding="0"
+                   BackgroundColor="{StaticResource TabUnselected}">
+                <Entry Placeholder="Add Tag"
+                       HeightRequest="45"
+                       Margin="10,0"/>
             </Frame>
 
-            <!-- Category -->
-            <Frame Grid.Row="3" CornerRadius="20" Padding="0" BackgroundColor="{StaticResource TabUnselected}">
+            <!-- 🔷 CATEGORY -->
+            <Frame Grid.Row="3"
+                   CornerRadius="20"
+                   Padding="0"
+                   BackgroundColor="{StaticResource TabUnselected}">
                 <Entry Placeholder="Category"
                        HeightRequest="45"
                        Margin="10,0"/>
             </Frame>
 
-            <!-- Video Link -->
-            <Frame Grid.Row="4" CornerRadius="20" Padding="0" BackgroundColor="{StaticResource TabUnselected}">
+            <!-- 🔷 VIDEO LINK -->
+            <Frame Grid.Row="4"
+                   CornerRadius="20"
+                   Padding="0"
+                   BackgroundColor="{StaticResource TabUnselected}">
                 <Grid>
                     <Entry Placeholder="Add video link"
                            HeightRequest="45"
                            Margin="10,0"/>
+
                     <Label Text="▼"
                            HorizontalOptions="End"
                            VerticalOptions="Center"
@@ -89,30 +91,34 @@
                 </Grid>
             </Frame>
 
-            <!-- Editor -->
-            <Frame Grid.Row="5" CornerRadius="20" Padding="10" BackgroundColor="{StaticResource TabUnselected}">
+            <!-- 🔷 EDITOR -->
+            <Frame Grid.Row="5"
+                   CornerRadius="20"
+                   Padding="10"
+                   BackgroundColor="{StaticResource TabUnselected}">
                 <Editor Placeholder="Write Article"
                         HeightRequest="120"/>
             </Frame>
 
+            <!-- 🔷 POST BUTTON -->
             <Button Grid.Row="6"
-                   Text="Post"
-                   BackgroundColor="{StaticResource News}"
-                   TextColor="{StaticResource TabUnselected}"
-                   FontSize="20"
-                   FontAttributes="Bold"
-                   CornerRadius="30"
-                   HeightRequest="60"
-                   WidthRequest="150"
-                   HorizontalOptions="Center"
-                   Margin="0,0,0,50">
-
+                    Text="Post"
+                    BackgroundColor="{StaticResource News}"
+                    TextColor="{StaticResource TabUnselected}"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    CornerRadius="30"
+                    HeightRequest="60"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,50"
+                    Clicked="OnPostClicked">
 
                 <Button.Shadow>
                     <Shadow Brush="#40000000"
-                Offset="0,5"
-                Radius="10"
-                Opacity="0.8"/>
+                            Offset="0,5"
+                            Radius="10"
+                            Opacity="0.8"/>
                 </Button.Shadow>
 
             </Button>

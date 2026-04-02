@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using News.NewsPages;
 
 namespace News
 {
@@ -11,7 +12,12 @@ namespace News
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            bool isLoggedIn = Preferences.Get("isLoggedIn", false);
+
+            if (isLoggedIn)
+                return new Window(new AppShell());
+            else
+                return new Window(new NavigationPage(new First()));
         }
     }
 }

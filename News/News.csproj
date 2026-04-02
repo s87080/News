@@ -47,12 +47,16 @@
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net10.0-android|AnyCPU'">
+	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\nww.png" HeightRequest="100" Color="#007BC0" BaseSize="256,256" />
+		<MauiImage Include="Resources\Splash\nww.png" Color="#FFFFFF" BaseSize="256,256" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -66,13 +70,29 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiImage Include="Resources\Splash\nww.png" />
+	  <None Remove="Platforms\Android\google-services.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <GoogleServicesJson Include="Platforms\Android\google-services.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MultiDexMainDexList Include="Resources\Splash\nww.png" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="9.1.1" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
+		<PackageReference Include="Plugin.Firebase.CloudMessaging" Version="4.0.1" />
+		<PackageReference Include="Plugin.FirebasePushNotification" Version="3.4.35" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="NewsPages\BoostPostxaml.xaml.cs">
+	    <DependentUpon>BoostPostxaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -112,6 +132,9 @@
 	  <MauiXaml Update="NewsPages\VerifyPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="NewsPages\Wallet.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Styles\AppColors.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -119,5 +142,22 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+
+	<PropertyGroup>
+	  <!-- Use short absolute paths to avoid MAX_PATH during restore/build -->
+	  <BaseIntermediateOutputPath>C:\tmp\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+	  <IntermediateOutputPath>C:\tmp\obj\$(MSBuildProjectName)\</IntermediateOutputPath>
+	  <OutputPath>C:\tmp\bin\$(Configuration)\$(MSBuildProjectName)\</OutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios' Or $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">
+	  <!-- Use very short global short paths to avoid MAX_PATH when copying iOS xcframework resources -->
+	  <BaseOutputPath>C:\P\bin\</BaseOutputPath>
+	  <BaseIntermediateOutputPath>C:\P\obj\</BaseIntermediateOutputPath>
+
+	  <!-- Keep Output/Intermediate short (you can include $(MSBuildProjectName) if you prefer) -->
+	  <OutputPath>$(BaseOutputPath)$(Configuration)\</OutputPath>
+	  <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\</IntermediateOutputPath>
+	</PropertyGroup>
 
 </Project>

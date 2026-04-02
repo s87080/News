@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "916431745522",
+    "project_id": "fir-e7e11",
+    "storage_bucket": "fir-e7e11.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916431745522:android:e79b5e84c7a4dc2b14fb6b",
+        "android_client_info": {
+          "package_name": "com.companyname.news"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIXKn0JOR8agJZVIbcrhIYB2B23tp2FF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,6 +7,10 @@ public partial class First : ContentPage
 		InitializeComponent();
 	}
 	private void GetStarted(object sender, EventArgs e) {
-		Navigation.PushAsync(new SignIn());
+		Navigation.PushAsync(new SignUp());
 	}
+	protected override void OnAppearing()
+	{
+		base.OnAppearing();
+    }
 }

@@ -49,6 +49,7 @@
             <Grid RowDefinitions="Auto,Auto">
 
                 <Label Text="Enter You'r Email"
+                        TextColor="{StaticResource Black}" 
                        Grid.Row="0"/>
                 <Entry Grid.Row="1" 
                         Placeholder="Email"
@@ -62,6 +63,7 @@
                  Grid.Row="1">
 
                 <Label Text="Verification Code"
+                        TextColor="{StaticResource Black}" 
                        Grid.Row="0"/>
                 <Entry Grid.Row="1" 
                         Placeholder="Email"
@@ -75,6 +77,7 @@
                  Grid.Row="2">
 
                 <Label Text="New Password"
+                        TextColor="{StaticResource Black}" 
                        Grid.Row="0"/>
                 <Entry Grid.Row="1" 
                         Placeholder="Email"
@@ -88,6 +91,7 @@
                  Grid.Row="3">
 
                 <Label Text="Re Enter Your Password"
+                        TextColor="{StaticResource Black}" 
                        Grid.Row="0"/>
                 <Entry Grid.Row="1" 
                         Placeholder="Email"

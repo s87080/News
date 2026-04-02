@@ -21,12 +21,14 @@
                            Aspect="AspectFit"/>
 
                     <Label Text="📌 G.T Road Kolkata"
-                           FontSize="16" />
+                           FontSize="16"
+                            TextColor="{StaticResource Black}" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout Grid.Column="1" Spacing="10">
                     <Border StrokeShape="RoundRectangle 15">
                         <Label Text="⭐ 599"
+                                TextColor="{StaticResource Black}" 
                                FontSize="12"
                                Padding="5" />
                     </Border>
@@ -42,17 +44,18 @@
             <ScrollView Grid.Row="1" Orientation="Horizontal">
                 <HorizontalStackLayout Spacing="25">
 
-                    <Label x:Name="Pop" Text="Popular">
+                    <Label x:Name="Pop" Text="Popular" TextColor="{StaticResource Black}"
+>
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Popular" />
                         </Label.GestureRecognizers>
                     </Label>
 
-                    <Label Text="All" />
-                    <Label Text="Politics" />
-                    <Label Text="Tech" />
-                    <Label Text="Health" />
-                    <Label Text="Science" />
+                    <Label Text="All"  TextColor="{StaticResource Black}" />
+                    <Label Text="Politics"  TextColor="{StaticResource Black}" />
+                    <Label Text="Tech"  TextColor="{StaticResource Black}" />
+                    <Label Text="Health"  TextColor="{StaticResource Black}" />
+                    <Label Text="Science"  TextColor="{StaticResource Black}" />
 
                 </HorizontalStackLayout>
             </ScrollView>
@@ -84,6 +87,7 @@
                 <!-- Question -->
                 <Label Grid.Row="0"
                        Text="Who is the best player of India Cricket Team ?"
+                       TextColor="{StaticResource Black}"
                        FontAttributes="Bold"
                        FontSize="18" />
 
@@ -97,6 +101,7 @@
                         <RadioButton VerticalOptions="Center"/>
                         <Label Grid.Column="1"
                                Text="Ms Dhoni"
+                               TextColor="{StaticResource Black}"
                                VerticalOptions="Center" />
                     </Grid>
 
@@ -112,6 +117,7 @@
                         <RadioButton />
                         <Label Grid.Column="1"
                                Text="Rohit Sharma"
+                               TextColor="{StaticResource Black}"
                                VerticalOptions="Center"/>
                     </Grid>
 
@@ -127,6 +133,7 @@
                         <RadioButton />
                         <Label Grid.Column="1"
                                Text="Virat Kohli"
+                               TextColor="{StaticResource Black}"
                                VerticalOptions="Center" />
                     </Grid>
 
@@ -164,10 +171,10 @@
                 <Image Source="relaiablesourses.png" Aspect="AspectFit" Grid.Row="0"></Image>
                 
                 <!--TEXT-->
-                <Label Grid.Row="1" FontAttributes="Bold" FontSize="15" Text="Mohali blast: Police find dump of 7,000 mobile phones, Oppn knocks security lapses"/>
+                <Label Grid.Row="1" TextColor="{StaticResource Black}" FontAttributes="Bold" FontSize="15" Text="Mohali blast: Police find dump of 7,000 mobile phones, Oppn knocks security lapses"/>
 
                 <!--TEXT-->
-                <Label Grid.Row="2" LineBreakMode="CharacterWrap" Text="Zee News is a well-known Indian news channel that delivers the latest updates from across the country and around the world. It covers a wide range of topics including politics, business, technology, health, and entertainment. Known for its fast reporting and live coverage, Zee News provides real-time breaking news along with detailed analysis to keep viewers informed. Its digital platforms also allow users to access news anytime through articles, videos, and live TV, making it a widely trusted source of information."/>
+                <Label Grid.Row="2" TextColor="{StaticResource Black}" LineBreakMode="CharacterWrap" Text="Zee News is a well-known Indian news channel that delivers the latest updates from across the country and around the world. It covers a wide range of topics including politics, business, technology, health, and entertainment. Known for its fast reporting and live coverage, Zee News provides real-time breaking news along with detailed analysis to keep viewers informed. Its digital platforms also allow users to access news anytime through articles, videos, and live TV, making it a widely trusted source of information."/>
             
                 <!--LIKE COMMENT SHARE-->
                 <Grid Grid.Row="3" ColumnDefinitions="*,Auto" Padding="0,8">
@@ -183,9 +190,9 @@
                     <!--COMMENTS & VIEWS-->
                     <Grid Grid.Column="1" ColumnDefinitions="Auto,Auto" ColumnSpacing="20" HorizontalOptions="End">
                         <!--COMMENTS-->
-                        <Label Text="99+ comments" Grid.Column="0"/>
+                        <Label Text="99+ comments" Grid.Column="0" TextColor="{StaticResource Black}"/>
                         <!--VIEWS-->
-                        <Label Text="45k views" Grid.Column="1"/>
+                        <Label Text="45k views" Grid.Column="1" TextColor="{StaticResource Black}"/>
                     </Grid>
                     
                 </Grid>
@@ -198,10 +205,10 @@
                 <Image Source="relaiablesourses.png" Aspect="AspectFit" Grid.Row="0"></Image>
 
                 <!--TEXT-->
-                <Label Grid.Row="1" FontAttributes="Bold" FontSize="15" Text="Mohali blast: Police find dump of 7,000 mobile phones, Oppn knocks security lapses"/>
+                <Label Grid.Row="1" TextColor="{StaticResource Black}" FontAttributes="Bold" FontSize="15" Text="Mohali blast: Police find dump of 7,000 mobile phones, Oppn knocks security lapses"/>
 
                 <!--TEXT-->
-                <Label Grid.Row="2" LineBreakMode="CharacterWrap" Text="Zee News is a well-known Indian news channel that delivers the latest updates from across the country and around the world. It covers a wide range of topics including politics, business, technology, health, and entertainment. Known for its fast reporting and live coverage, Zee News provides real-time breaking news along with detailed analysis to keep viewers informed. Its digital platforms also allow users to access news anytime through articles, videos, and live TV, making it a widely trusted source of information."/>
+                <Label Grid.Row="2" TextColor="{StaticResource Black}" LineBreakMode="CharacterWrap" Text="Zee News is a well-known Indian news channel that delivers the latest updates from across the country and around the world. It covers a wide range of topics including politics, business, technology, health, and entertainment. Known for its fast reporting and live coverage, Zee News provides real-time breaking news along with detailed analysis to keep viewers informed. Its digital platforms also allow users to access news anytime through articles, videos, and live TV, making it a widely trusted source of information."/>
 
                 <!--LIKE COMMENT SHARE-->
                 <Grid Grid.Row="3" ColumnDefinitions="*,Auto" Padding="0,8">
@@ -217,9 +224,9 @@
                     <!--COMMENTS & VIEWS-->
                     <Grid Grid.Column="1" ColumnDefinitions="Auto,Auto" ColumnSpacing="20" HorizontalOptions="End">
                         <!--COMMENTS-->
-                        <Label Text="99+ comments" Grid.Column="0"/>
+                        <Label Text="99+ comments" Grid.Column="0" TextColor="{StaticResource Black}"/>
                         <!--VIEWS-->
-                        <Label Text="45k views" Grid.Column="1"/>
+                        <Label Text="45k views" Grid.Column="1" TextColor="{StaticResource Black}"/>
                     </Grid>
 
                 </Grid>
@@ -232,10 +239,10 @@
                 <Image Source="relaiablesourses.png" Aspect="AspectFit" Grid.Row="0"></Image>
 
                 <!--TEXT-->
-                <Label Grid.Row="1" FontAttributes="Bold" FontSize="15" Text="Mohali blast: Police find dump of 7,000 mobile phones, Oppn knocks security lapses"/>
+                <Label Grid.Row="1" TextColor="{StaticResource Black}" FontAttributes="Bold" FontSize="15" Text="Mohali blast: Police find dump of 7,000 mobile phones, Oppn knocks security lapses"/>
 
                 <!--TEXT-->
-                <Label Grid.Row="2" LineBreakMode="CharacterWrap" Text="Zee News is a well-known Indian news channel that delivers the latest updates from across the country and around the world. It covers a wide range of topics including politics, business, technology, health, and entertainment. Known for its fast reporting and live coverage, Zee News provides real-time breaking news along with detailed analysis to keep viewers informed. Its digital platforms also allow users to access news anytime through articles, videos, and live TV, making it a widely trusted source of information."/>
+                <Label Grid.Row="2" TextColor="{StaticResource Black}" LineBreakMode="CharacterWrap" Text="Zee News is a well-known Indian news channel that delivers the latest updates from across the country and around the world. It covers a wide range of topics including politics, business, technology, health, and entertainment. Known for its fast reporting and live coverage, Zee News provides real-time breaking news along with detailed analysis to keep viewers informed. Its digital platforms also allow users to access news anytime through articles, videos, and live TV, making it a widely trusted source of information."/>
 
                 <!--LIKE COMMENT SHARE-->
                 <Grid Grid.Row="3" ColumnDefinitions="*,Auto" Padding="0,8">
@@ -251,9 +258,9 @@
                     <!--COMMENTS & VIEWS-->
                     <Grid Grid.Column="1" ColumnDefinitions="Auto,Auto" ColumnSpacing="20" HorizontalOptions="End">
                         <!--COMMENTS-->
-                        <Label Text="99+ comments" Grid.Column="0"/>
+                        <Label Text="99+ comments" Grid.Column="0" TextColor="{StaticResource Black}"/>
                         <!--VIEWS-->
-                        <Label Text="45k views" Grid.Column="1"/>
+                        <Label Text="45k views" Grid.Column="1" TextColor="{StaticResource Black}"/>
                     </Grid>
 
                 </Grid>
@@ -266,10 +273,10 @@
                 <Image Source="relaiablesourses.png" Aspect="AspectFit" Grid.Row="0"></Image>
 
                 <!--TEXT-->
-                <Label Grid.Row="1" FontAttributes="Bold" FontSize="15" Text="Mohali blast: Police find dump of 7,000 mobile phones, Oppn knocks security lapses"/>
+                <Label Grid.Row="1" TextColor="{StaticResource Black}" FontAttributes="Bold" FontSize="15" Text="Mohali blast: Police find dump of 7,000 mobile phones, Oppn knocks security lapses"/>
 
                 <!--TEXT-->
-                <Label Grid.Row="2" LineBreakMode="CharacterWrap" Text="Zee News is a well-known Indian news channel that delivers the latest updates from across the country and around the world. It covers a wide range of topics including politics, business, technology, health, and entertainment. Known for its fast reporting and live coverage, Zee News provides real-time breaking news along with detailed analysis to keep viewers informed. Its digital platforms also allow users to access news anytime through articles, videos, and live TV, making it a widely trusted source of information."/>
+                <Label Grid.Row="2" TextColor="{StaticResource Black}" LineBreakMode="CharacterWrap" Text="Zee News is a well-known Indian news channel that delivers the latest updates from across the country and around the world. It covers a wide range of topics including politics, business, technology, health, and entertainment. Known for its fast reporting and live coverage, Zee News provides real-time breaking news along with detailed analysis to keep viewers informed. Its digital platforms also allow users to access news anytime through articles, videos, and live TV, making it a widely trusted source of information."/>
 
                 <!--LIKE COMMENT SHARE-->
                 <Grid Grid.Row="3" ColumnDefinitions="*,Auto" Padding="0,8">
@@ -285,9 +292,9 @@
                     <!--COMMENTS & VIEWS-->
                     <Grid Grid.Column="1" ColumnDefinitions="Auto,Auto" ColumnSpacing="20" HorizontalOptions="End">
                         <!--COMMENTS-->
-                        <Label Text="99+ comments" Grid.Column="0"/>
+                        <Label Text="99+ comments" Grid.Column="0" TextColor="{StaticResource Black}" />
                         <!--VIEWS-->
-                        <Label Text="45k views" Grid.Column="1"/>
+                        <Label Text="45k views" Grid.Column="1" TextColor="{StaticResource Black}"/>
                     </Grid>
 
                 </Grid>
@@ -301,10 +308,10 @@
                 <Image Source="relaiablesourses.png" Aspect="AspectFit" Grid.Row="0"></Image>
 
                 <!--TEXT-->
-                <Label Grid.Row="1" FontAttributes="Bold" FontSize="15" Text="Mohali blast: Police find dump of 7,000 mobile phones, Oppn knocks security lapses"/>
+                <Label Grid.Row="1" TextColor="{StaticResource Black}" FontAttributes="Bold" FontSize="15" Text="Mohali blast: Police find dump of 7,000 mobile phones, Oppn knocks security lapses"/>
 
                 <!--TEXT-->
-                <Label Grid.Row="2" LineBreakMode="CharacterWrap" Text="Zee News is a well-known Indian news channel that delivers the latest updates from across the country and around the world. It covers a wide range of topics including politics, business, technology, health, and entertainment. Known for its fast reporting and live coverage, Zee News provides real-time breaking news along with detailed analysis to keep viewers informed. Its digital platforms also allow users to access news anytime through articles, videos, and live TV, making it a widely trusted source of information."/>
+                <Label Grid.Row="2" TextColor="{StaticResource Black}" LineBreakMode="CharacterWrap" Text="Zee News is a well-known Indian news channel that delivers the latest updates from across the country and around the world. It covers a wide range of topics including politics, business, technology, health, and entertainment. Known for its fast reporting and live coverage, Zee News provides real-time breaking news along with detailed analysis to keep viewers informed. Its digital platforms also allow users to access news anytime through articles, videos, and live TV, making it a widely trusted source of information."/>
 
                 <!--LIKE COMMENT SHARE-->
                 <Grid Grid.Row="3" ColumnDefinitions="*,Auto" Padding="0,8">
@@ -320,9 +327,9 @@
                     <!--COMMENTS & VIEWS-->
                     <Grid Grid.Column="1" ColumnDefinitions="Auto,Auto" ColumnSpacing="20" HorizontalOptions="End">
                         <!--COMMENTS-->
-                        <Label Text="99+ comments" Grid.Column="0"/>
+                        <Label Text="99+ comments" Grid.Column="0" TextColor="{StaticResource Black}"/>
                         <!--VIEWS-->
-                        <Label Text="45k views" Grid.Column="1"/>
+                        <Label Text="45k views" Grid.Column="1" TextColor="{StaticResource Black}"/>
                     </Grid>
 
                 </Grid>

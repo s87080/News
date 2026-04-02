@@ -42,4 +42,17 @@ public partial class MySetting : ContentPage
             await Navigation.PushAsync(new SignIn());
         }
     }
+    private void OnWallet(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new Wallet());
+    }
+    private void MyPostTapped(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new NewsDetails());
+    }
+    private void BoostTapped(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new BoostPostxaml());
+    }
+
 }

@@ -5,7 +5,8 @@
              Shell.NavBarIsVisible="False"
              BackgroundColor="{StaticResource BgColor}"
              Title="First"
-             Shell.TabBarIsVisible="False">
+             Shell.TabBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
     
 
     <Grid RowDefinitions="Auto,Auto,Auto"
@@ -46,6 +47,7 @@
         <!-- DESCRIPTION -->
         <Label Grid.Row="1"
                Text="All type of news all trusted sources for all type of people"
+               TextColor="{StaticResource Black}"
                Margin="20,-35,20,0"
                FontSize="12"
                HorizontalTextAlignment="Center"/>

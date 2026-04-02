@@ -7,5 +7,10 @@ public partial class NewsDetails : ContentPage
 		InitializeComponent();
 	}
 
+	private void OnArrowTapped(object sender, EventArgs e)
+	{
+		Navigation.PushAsync(new Dashboard());
+	}
+
 	
 }

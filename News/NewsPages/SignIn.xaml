@@ -5,7 +5,8 @@
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False"
              BackgroundColor="{StaticResource BgColor}"
-             Title="SignIn">
+             Title="SignIn"
+             NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout
                         
         Padding="0,30,0,0">
@@ -48,24 +49,32 @@
                RowSpacing="35">
                 <!-- USERNAME -->
                 <Entry Grid.Row="0" 
-               Placeholder="Username"
-               FontSize="16"
-               BackgroundColor="Transparent"/>
+                       Placeholder="Username"
+                       TextColor="{StaticResource Black}"
+                       FontSize="16"
+                       BackgroundColor="Transparent"
+                       x:Name="USERNAME"/>
 
                 <!-- EMAIL -->
                 <Entry 
                Grid.Row="1"
                Placeholder="Email"
+               TextColor="{StaticResource Black}"
+
                Keyboard="Email"
                FontSize="16"
-               BackgroundColor="Transparent"/>
+               BackgroundColor="Transparent"
+                     x:Name="EMAIL"/>
                 
                 <!-- PASSWORD -->
                 <Entry Grid.Row="2" 
                Placeholder="Password"
+               TextColor="{StaticResource Black}"
+
                IsPassword="True"
                FontSize="16"
-               BackgroundColor="Transparent"/>
+               BackgroundColor="Transparent"
+                        x:Name="PASSWORD"/>
 
                 <!--FORGET PASSWORD-->
                 <Button Grid.Row="3"

@@ -6,4 +6,9 @@ public partial class Profile : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void OnArrowTapped(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new MySetting());
+    }
 }

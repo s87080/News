@@ -42,7 +42,7 @@
             
             <!--TAGS-->
             <Grid Grid.Row="1" ColumnDefinitions="*,*">
-                <Label Grid.Column="0" Text="Popular Tags" HorizontalOptions="Start" FontSize="18" FontAttributes="Bold"/>
+                    <Label Grid.Column="0" Text="Popular Tags" HorizontalOptions="Start" FontSize="18" FontAttributes="Bold"  TextColor="{StaticResource Black}"/>
                 <Label Grid.Column="1" Text="View all" HorizontalOptions="End" FontSize="14" FontAttributes="Bold" TextColor="{StaticResource News}"/>
             </Grid>
             
@@ -80,7 +80,7 @@
             </CollectionView>
 
             <Grid Grid.Row="3" ColumnDefinitions="*,*">
-                <Label Text="Latest News" FontAttributes="Bold" FontSize="18" HorizontalOptions="Start"/>
+                    <Label Text="Latest News" FontAttributes="Bold" FontSize="18" HorizontalOptions="Start" TextColor="{StaticResource Black}"/>
                 <Label Grid.Column="1" Text="View all" HorizontalOptions="End" FontSize="14" FontAttributes="Bold" TextColor="{StaticResource News}"/>
 
             </Grid>
@@ -142,7 +142,7 @@
             </CollectionView>
 
             <Grid Grid.Row="5" ColumnDefinitions="*,*">
-                <Label Text="Recomendation topics" FontAttributes="Bold" FontSize="16"/>
+                    <Label Text="Recomendation topics" FontAttributes="Bold" FontSize="16" TextColor="{StaticResource Black}"/>
                 <Label Grid.Column="1" Text="View all" TextColor="{StaticResource News}" HorizontalOptions="End" FontAttributes="Bold" FontSize="14"/>
             </Grid>
 
@@ -165,10 +165,11 @@
                                         Padding="10"
                                         CornerRadius="15"
                                         HasShadow="False"
-                                        BackgroundColor="{StaticResource SearchBg}">
+                                        BackgroundColor="{StaticResource SearchBg}"
+                                        >
 
                                     <!-- MAIN GRID -->
-                                    <Grid ColumnDefinitions="*,100" ColumnSpacing="8">
+                                    <Grid ColumnDefinitions="*,100" ColumnSpacing="8" >
 
                                             <!-- LEFT CONTENT -->
                                         <Grid Grid.Column="0" RowDefinitions="*,Auto">
@@ -208,7 +209,7 @@
 
                                                     <Image
                                                     Source="{Binding Image}"
-                                                    Aspect="AspectFill"/>
+                                                    Aspect="AspectFill" />
                                         </Frame>
                                     </Grid>
                                 </Frame>
