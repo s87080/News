@@ -3,12 +3,11 @@ using System.Collections.ObjectModel;
 
 namespace News.NewsPages;
 
-public partial class Wallet : ContentPage
+public partial class MyWallet : ContentPage
 
 {
     public ObservableCollection<TransactionModel> Transactions { get; set; }
-
-    public Wallet()
+    public MyWallet()
 	{
 		InitializeComponent();
 

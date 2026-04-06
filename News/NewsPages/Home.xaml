@@ -4,6 +4,7 @@
              x:Class="News.NewsPages.Home"
              Shell.NavBarIsVisible="False"
              BackgroundColor="{StaticResource BgColor}"
+             NavigationPage.HasNavigationBar="False"
              Title="Home">
 
     <!--MAIN SECTION-->
@@ -13,10 +14,12 @@
         <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="15" RowSpacing="10">
             <Frame CornerRadius="25"
                    Grid.Row="0"
+                   HeightRequest="45"
+                   
                     BackgroundColor="{StaticResource SearchBg}"
-                    Padding="8,8"
+                    Padding="8,2"
                     HasShadow="False"
-                    Margin="10,0">
+                    >
 
                 <Grid ColumnDefinitions="Auto,*"
                       VerticalOptions="Center">
@@ -33,6 +36,7 @@
                             Placeholder="Search city..."
                             BackgroundColor="Transparent"
                             FontSize="16"
+                           TextColor="Black"
                             Margin="10,0,0,0"/>
 
                 </Grid>

@@ -47,6 +47,6 @@ public partial class SelectCity : ContentPage
     }
 	private void Next(Object sender, EventArgs e)
 	{
-		Navigation.PushAsync(new Dashboard());
+		Navigation.PushAsync(new SignIn());
 	}
 }

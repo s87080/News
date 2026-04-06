@@ -1,0 +1,77 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.NewsPages.WatchAdds"
+             Title="Watch Ads"
+             BackgroundColor="{StaticResource BgColor}"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False">
+
+    <Grid Padding="20"
+          RowDefinitions="Auto,*,Auto">
+
+        <!-- 🔷 HEADER -->
+        <Label Text="Watch Ads and Earn"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+
+        <!-- 🔷 CONTENT -->
+        <Frame Grid.Row="1"
+               Margin="0"
+               Padding="15" 
+               VerticalOptions="Center" 
+               CornerRadius="15" 
+               HasShadow="True"
+               BackgroundColor="{StaticResource SearchBg}">
+        <VerticalStackLayout Grid.Row="1"
+                             Spacing="20"
+                             >
+
+            <!-- Card -->
+            <Frame CornerRadius="20"
+                   Padding="20"
+                   BackgroundColor="{StaticResource TabBg}"
+                   HasShadow="True">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Label Text="Earn Coins Easily"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Black}"/>
+
+                    <Label Text="Watch short ads and get instant rewards. Use coins for premium features."
+                           TextColor="{StaticResource Black}"/>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <!-- Buttons -->
+            <Button Text="Watch Ad"
+                    HeightRequest="50"
+                    CornerRadius="12"
+                    BackgroundColor="{AppThemeBinding Light=#007BC0, Dark=#005A8C}"
+                    TextColor="White"
+                    Clicked="OnWatchAdClicked"/>
+
+            <Button Text="Check Balance"
+                    HeightRequest="50"
+                    CornerRadius="12"
+                    BackgroundColor="{AppThemeBinding Light=#28A745, Dark=#1B5E20}"
+                    TextColor="White"
+                    Clicked="OnCheckBalanceClicked"/>
+
+        </VerticalStackLayout>
+        </Frame>
+
+        <!-- 🔷 FOOTER -->
+        <Label Grid.Row="2"
+               Text="Watch more ads to earn more coins"
+               HorizontalOptions="Center"
+               FontSize="12"
+               TextColor="{AppThemeBinding Light=#777, Dark=#AAAAAA}"/>
+
+    </Grid>
+</ContentPage>

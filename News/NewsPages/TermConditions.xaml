@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.NewsPages.TermConditions"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource BgColor}"
+             NavigationPage.HasNavigationBar="False"
+             Title="TermConditions">
+    
+    <Grid Padding="15"
+          RowDefinitions="Auto,*">
+
+        <!-- 🔷 HEADER -->
+        <Label Grid.Row="0"
+               Text="Terms And Conditions"
+               FontSize="22"
+               FontAttributes="Bold"
+               Margin="0,10" 
+               TextColor="Black"/>
+
+        <!-- 🔷 CONTENT -->
+        <ScrollView Grid.Row="1">
+
+            <VerticalStackLayout Spacing="15">
+
+                <Label Text="1. Acceptance of Terms"
+                       FontAttributes="Bold"
+                       FontSize="16"
+                       TextColor="Black"/>
+                <Label Text="By using this app, you agree to follow all the terms and conditions mentioned here."
+                       TextColor="Black"/>
+
+                <Label Text="2. User Content"
+                       FontAttributes="Bold"
+                       FontSize="16"
+                       TextColor="Black"/>
+                <Label Text="Users are responsible for the content they post. Any harmful or illegal content is strictly prohibited."
+                       TextColor="Black"/>
+
+                <Label Text="3. Privacy Policy"
+                       FontAttributes="Bold"
+                       FontSize="16"
+                       TextColor="Black"/>
+                <Label Text="We respect your privacy and do not share your personal data without your consent."
+                       TextColor="Black"/>
+
+                <Label Text="4. Prohibited Activities"
+                       FontAttributes="Bold"
+                       FontSize="16"
+                       TextColor="Black"/>
+                <Label Text="Users must not post fake news, abusive language, or misleading information."
+                       TextColor="Black"/>
+
+                <Label Text="5. Account Suspension"
+                       FontAttributes="Bold"
+                       FontSize="16"
+                       TextColor="Black"/>
+                <Label Text="We reserve the right to suspend or remove any account that violates our policies."
+                       TextColor="Black"/>
+
+                <Label Text="6. Changes to Terms"
+                       FontAttributes="Bold"
+                       FontSize="16"
+                       TextColor="Black"/>
+                <Label Text="We may update these terms anytime. Continued use means you accept the updated terms."
+                       TextColor="Black"/>
+
+                <Label Text="7. Contact Us"
+                       FontAttributes="Bold"
+                       FontSize="16"
+                       TextColor="Black"/>
+                <Label Text="If you have any questions, please contact our support team."
+                       TextColor="Black"/>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+    </Grid>
+</ContentPage>

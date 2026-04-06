@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="News.NewsPages.Notifications"
+    BackgroundColor="{StaticResource BgColor}"
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="False"
+    Title="Notifications">
+
+    <Grid Padding="10"
+          RowDefinitions="Auto,*">
+
+        <!-- 🔷 HEADER -->
+        <Label Grid.Row="0"
+               Text="Notifications"
+               FontSize="22"
+               FontAttributes="Bold"
+               TextColor="Black"
+               Margin="5,10"/>
+
+        <!-- 🔷 LIST -->
+        <CollectionView Grid.Row="1"
+                        ItemsSource="{Binding NotificationListData}"
+                        SelectionMode="None">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Frame CornerRadius="15"
+                           Padding="10"
+                           Margin="5"
+                           BackgroundColor="White"
+                           HasShadow="True">
+
+                        <Grid ColumnDefinitions="50,*"
+                              ColumnSpacing="10">
+
+                            <!-- 🔷 ICON -->
+                            <Frame WidthRequest="40"
+                                   HeightRequest="40"
+                                   CornerRadius="20"
+                                   BackgroundColor="{StaticResource News}"
+                                   Padding="0"
+                                   VerticalOptions="Center">
+
+                                <Label Text="🔔"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                      />
+                            </Frame>
+
+                            <!-- 🔷 TEXT -->
+                            <VerticalStackLayout Grid.Column="1"
+                                                 Spacing="3">
+
+                                <Label Text="{Binding Title}"
+                                       FontAttributes="Bold"
+                                       FontSize="14"
+                                       TextColor="Black"/>
+
+                                <Label Text="{Binding Message}"
+                                       FontSize="12"
+                                       TextColor="Gray"/>
+
+                                <Label Text="{Binding Time}"
+                                       FontSize="11"
+                                       TextColor="#999999"/>
+                            </VerticalStackLayout>
+
+                        </Grid>
+
+                    </Frame>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>

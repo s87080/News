@@ -9,5 +9,7 @@ public partial class AddPost : ContentPage
     private async void OnPostClicked(object sender, EventArgs e)
     {
         await DisplayAlert("Success", "Post Added Successfully ✅", "OK");
+        await Navigation.PushAsync(new Dashboard());
     }
+   
 }

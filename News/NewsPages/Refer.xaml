@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.NewsPages.Refer"
+             Title="Refer"
+             BackgroundColor="{StaticResource BgColor}"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
+    >
+    <Grid Padding="20"
+          RowDefinitions="Auto,*,Auto">
+
+        <!-- 🔷 HEADER -->
+        <Label Text="🎯 Earn Rewards"
+               TextColor="Black"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+        ></Label>
+        <!-- 🔷 CONTENT -->
+        <Frame Grid.Row="1"
+               Margin="0"
+               Padding="15" 
+               VerticalOptions="Center" 
+               CornerRadius="15" 
+               HasShadow="True"
+               BackgroundColor="{StaticResource SearchBg}">
+
+            <VerticalStackLayout Grid.Row="1"
+                             Spacing="20"
+                             VerticalOptions="Center">
+
+            <!-- Info Card -->
+            <Frame CornerRadius="20"
+                   Padding="20"
+                   BackgroundColor="{StaticResource TabBg}"
+                   HasShadow="True">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Label Text="Watch Ads And Earn Coins 💰"
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           FontSize="16"
+                           />
+
+                    <Label Text="Watch short ads and earn rewards instantly. You can use coins for premium features."
+                           TextColor="{StaticResource Black}"/>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <!-- Buttons -->
+            <Button Text="📋 Refer"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    CornerRadius="12"
+                    BackgroundColor="{StaticResource News}"
+                    TextColor="White"
+                    Clicked="OnWatchAdClicked">
+                
+            </Button>
+
+            <Button Text="🚀 Run"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    CornerRadius="12"
+                    BackgroundColor="#28A745"
+                    TextColor="White"
+                    Clicked="OnRunClicked"/>
+
+        </VerticalStackLayout>
+        </Frame>
+
+        <!-- 🔷 FOOTER -->
+        <Label Grid.Row="2"
+               Text="Earn more by watching more ads!"
+               HorizontalOptions="Center"
+               FontSize="12"
+               TextColor="{AppThemeBinding Light=#777, Dark=#AAA}"/>
+
+    </Grid>
+    
+</ContentPage>

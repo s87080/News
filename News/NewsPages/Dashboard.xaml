@@ -3,6 +3,8 @@
              x:Class="News.NewsPages.Dashboard"
              Shell.NavBarIsVisible="False"
              BackgroundColor="{StaticResource BgColor}"
+             NavigationPage.HasNavigationBar="False"
+             
              Title="Dashboard">
 
     <ScrollView>
@@ -152,6 +154,16 @@
                         WidthRequest="200"
                         HorizontalOptions="End"
                         Clicked="SeeResults">
+                    <Button.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#005A99" Offset="0.0"/>
+                            <!-- darker -->
+                            <GradientStop Color="#007BC0" Offset="0.5"/>
+                            <!-- main color -->
+                            <GradientStop Color="#33A1E0" Offset="1.0"/>
+                            <!-- lighter -->
+                        </LinearGradientBrush>
+                    </Button.Background>
 
                     <Button.Shadow>
                         <Shadow Brush="#40000000"

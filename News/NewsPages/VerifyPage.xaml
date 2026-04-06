@@ -1,132 +1,165 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="News.NewsPages.VerifyPage"
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False"
              BackgroundColor="{StaticResource BgColor}"
-             Title="VerifyPage">
-    
-    <Grid RowDefinitions="Auto,Auto">
-            
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <Grid RowDefinitions="Auto,Auto,*">
+
+            <!-- HEADER -->
             <Grid Grid.Row="0"
                   ColumnDefinitions="Auto,Auto,Auto"
                   HorizontalOptions="Center"
-                  VerticalOptions="Center">
+                  Margin="0,30,0,10">
 
-                <!-- IMAGE -->
                 <Image Source="nw.png"
                        Grid.Column="0"
-                       HeightRequest="120"
-                       VerticalOptions="Center"
-                       Margin="0,0,0,0"/>
+                       HeightRequest="110"/>
 
-                <!-- NEWS TEXT -->
                 <Label Grid.Column="1"
                        Text="News"
-                       TextColor="{StaticResource News}"
-                       VerticalOptions="Center"
                        FontAttributes="Bold"
-                       FontSize="30"
-                       Margin="-15,0,0,0"/>
+                       VerticalTextAlignment="Center"
+                       FontSize="32"
+                       Margin="-10,0,0,0"
+                       TextColor="{StaticResource News}"/>
 
-                <!-- WATCH TEXT -->
                 <Label Grid.Column="2"
                        Text="Watch"
-                       TextColor="{StaticResource Watch}"
-                       VerticalOptions="Center"
                        FontAttributes="Bold"
-                       FontSize="30"/>
-
+                       VerticalTextAlignment="Center"
+                       FontSize="32"
+                       TextColor="{StaticResource Watch}"/>
             </Grid>
 
-        <Grid Grid.Row="1"
-                  RowDefinitions="Auto,Auto,Auto,Auto,Auto"
-                  Padding="30,0"
-                  RowSpacing="35">
-            
-            <!-- EMAIL -->
-            <Grid RowDefinitions="Auto,Auto">
+            <!-- CARD -->
+            <Frame Grid.Row="1"
+                   Margin="20,10"
+                   CornerRadius="25"
+                   BackgroundColor="White"
+                   HasShadow="True">
 
-                <Label Text="Enter You'r Email"
-                        TextColor="{StaticResource Black}" 
-                       Grid.Row="0"/>
-                <Entry Grid.Row="1" 
-                        Placeholder="Email"
-                        FontSize="16"
-                        BackgroundColor="Transparent"/>
-            
+                <Frame.Shadow>
+                    <Shadow Brush="#30000000" Offset="0,8" Radius="15"/>
+                </Frame.Shadow>
+
+                <Grid Padding="20"
+                      RowSpacing="12"
+                      RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+
+                    <!-- EMAIL -->
+                    <Label Text="Email" TextColor="#555"/>
+                    <Frame Grid.Row="1"
+                           CornerRadius="15"
+                           Padding="10"
+                           BackgroundColor="#F5F7FB">
+                        <Entry Placeholder="Enter email"
+                               Keyboard="Email"
+                               TextColor="Black"
+                               BackgroundColor="Transparent"/>
+                    </Frame>
+
+                    <!-- CODE -->
+                    <Label Grid.Row="2"
+                           Text="Verification Code"
+                           TextColor="#555"/>
+                    <Frame Grid.Row="3"
+                           CornerRadius="15"
+                           Padding="10"
+                           BackgroundColor="#F5F7FB">
+                        <Entry Placeholder="Enter code"
+                               TextColor="Black"
+                               BackgroundColor="Transparent"/>
+                    </Frame>
+
+                    <!-- NEW PASSWORD -->
+                    <Label Grid.Row="4"
+                           Text="New Password"
+                           TextColor="#555"/>
+                    <Frame Grid.Row="5"
+                           CornerRadius="15"
+                           Padding="10"
+                           BackgroundColor="#F5F7FB">
+                        <Entry Placeholder="New password"
+                               IsPassword="True"
+                               TextColor="Black"
+                               BackgroundColor="Transparent"/>
+                    </Frame>
+
+                    <!-- CONFIRM PASSWORD -->
+                    <Label Grid.Row="6"
+                           Text="Confirm Password"
+                           TextColor="#555"/>
+                    <Frame Grid.Row="7"
+                           CornerRadius="15"
+                           Padding="10"
+                           BackgroundColor="#F5F7FB">
+                        <Entry Placeholder="Re-enter password"
+                               IsPassword="True"
+                               TextColor="Black"
+                               BackgroundColor="Transparent"/>
+                    </Frame>
+
+                    <!-- BUTTON -->
+                    <Button Grid.Row="8"
+                            Text="Verify and Continue"
+                            FontSize="18"
+                            FontAttributes="Bold"
+                            HeightRequest="55"
+                            CornerRadius="30"
+                            Margin="0,15,0,0"
+                            TextColor="White"
+                            Clicked="City">
+
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="#005A99" Offset="0.0"/>
+                                <GradientStop Color="#007BC0" Offset="0.5"/>
+                                <GradientStop Color="#33A1E0" Offset="1.0"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+
+                        <Button.Shadow>
+                            <Shadow Brush="#40000000"
+                                    Offset="0,6"
+                                    Radius="10"/>
+                        </Button.Shadow>
+                    </Button>
+
+                </Grid>
+            </Frame>
+
+            <!-- FOOTER -->
+            <Grid Grid.Row="2" RowDefinitions="Auto,Auto" VerticalOptions="End">
+
+                <VerticalStackLayout Spacing="25" Padding="20">
+
+                    <Grid ColumnDefinitions="*,Auto,*">
+                        <BoxView HeightRequest="1" BackgroundColor="#DDD"/>
+                        <Label Grid.Column="1"
+                               Text="secure verification"
+                               Margin="10,0"
+                               FontSize="13"
+                               TextColor="Gray"/>
+                        <BoxView Grid.Column="2"
+                                 HeightRequest="1"
+                                 BackgroundColor="#DDD"/>
+                    </Grid>
+
+                </VerticalStackLayout>
+
+                <Label Grid.Row="1"
+                       HorizontalTextAlignment="Center"
+                       FontSize="12"
+                       Margin="0,0,0,10"
+                       TextColor="Gray"
+                       Text="We protect your data securely"/>
+
             </Grid>
-            
-            <!-- VERIFICATION CODE -->
-            <Grid RowDefinitions="Auto,Auto"
-                 Grid.Row="1">
-
-                <Label Text="Verification Code"
-                        TextColor="{StaticResource Black}" 
-                       Grid.Row="0"/>
-                <Entry Grid.Row="1" 
-                        Placeholder="Email"
-                        FontSize="16"
-                        BackgroundColor="Transparent"/>
-            
-            </Grid>
-            
-            <!-- PASSWORD -->
-            <Grid RowDefinitions="Auto,Auto"
-                 Grid.Row="2">
-
-                <Label Text="New Password"
-                        TextColor="{StaticResource Black}" 
-                       Grid.Row="0"/>
-                <Entry Grid.Row="1" 
-                        Placeholder="Email"
-                        FontSize="16"
-                        BackgroundColor="Transparent"/>
-            
-            </Grid>
-            
-            <!-- RE ENTER YOUR PASSWORD -->
-            <Grid RowDefinitions="Auto,Auto"
-                 Grid.Row="3">
-
-                <Label Text="Re Enter Your Password"
-                        TextColor="{StaticResource Black}" 
-                       Grid.Row="0"/>
-                <Entry Grid.Row="1" 
-                        Placeholder="Email"
-                        FontSize="16"
-                        BackgroundColor="Transparent"/>
-            
-            </Grid>
-            
-            <!--SIGN IN-->
-            <Button Grid.Row="4"
-                    Text="Select City"
-                    BackgroundColor="{StaticResource News}"
-                    TextColor="{StaticResource TabUnselected}"
-                    FontSize="20"
-                    FontAttributes="Bold"
-                    CornerRadius="30"
-                    HeightRequest="60"
-                    WidthRequest="150"
-                    HorizontalOptions="Center"
-                    Margin="0,20,0,0"
-                    Clicked="City"
-                    >
-
-                <Button.Shadow>
-                    <Shadow Brush="#40000000"
-                    Offset="0,5"
-                    Radius="10"
-                    Opacity="0.8"/>
-                </Button.Shadow>
-
-            </Button>
-
-
 
         </Grid>
-    </Grid>
-    
+    </ScrollView>
 </ContentPage>

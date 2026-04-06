@@ -4,6 +4,7 @@
              x:Class="News.NewsPages.MySetting"
              Shell.NavBarIsVisible="False"
              BackgroundColor="{StaticResource BgColor}"
+             NavigationPage.HasNavigationBar="False"
              Title="MySetting">
    
     <!--MAIN GRID-->
@@ -119,6 +120,9 @@
         <Border Grid.Row="5" Margin="0" Padding="10" BackgroundColor="Transparent">
 
             <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TappedNotifications"/>
+                </Grid.GestureRecognizers>
 
                 <Image 
                        Source="notification.png" 
@@ -143,6 +147,9 @@
         <Border Grid.Row="6" Margin="0" Padding="10" BackgroundColor="Transparent">
 
             <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Conditions"/>
+                </Grid.GestureRecognizers>
 
                 <Image 
                        Source="conditions.png" 
@@ -167,8 +174,10 @@
         <Border Grid.Row="7" Margin="0" Padding="10" BackgroundColor="Transparent">
 
             <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
-
-                <Image 
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="AboutTapped"/>
+                    </Grid.GestureRecognizers>
+                    <Image 
                       Source="question.png" 
                       Aspect="AspectFit" 
                       HeightRequest="20"/>
@@ -191,8 +200,11 @@
         <Border Grid.Row="8" Margin="0" Padding="10" BackgroundColor="Transparent">
 
             <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="WatchAddsTapped"/>
+                    </Grid.GestureRecognizers>
 
-                <Image 
+                    <Image 
                       Source="star.png" 
                       Aspect="AspectFit" 
                       HeightRequest="20"/>
@@ -215,8 +227,11 @@
         <Border Grid.Row="9" Margin="0" Padding="10" BackgroundColor="Transparent">
 
             <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ReferTapped"/>
+                    </Grid.GestureRecognizers>
 
-                <Image 
+                    <Image 
                       Source="refer.png" 
                       Aspect="AspectFit" 
                       HeightRequest="20"/>
@@ -239,8 +254,6 @@
         <Border Grid.Row="10" Margin="0" Padding="10" BackgroundColor="Transparent">
 
             <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
-
-
                 <Grid.GestureRecognizers>
                     <TapGestureRecognizer Tapped="logutpage"/>
                 </Grid.GestureRecognizers>

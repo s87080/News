@@ -5,6 +5,7 @@
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False"
              BackgroundColor="{StaticResource BgColor}"
+             NavigationPage.HasNavigationBar="False"
              Title="Profile">
 
 
@@ -93,12 +94,23 @@
                 Margin="10,10,0,0"
                 Text="Browser File"
                 BackgroundColor="Transparent"
-                TextColor="{StaticResource News}"
+                TextColor="White"
                 BorderColor="{StaticResource News}"
                 BorderWidth="2"
                 CornerRadius="20"
                 Padding="20,5"
-                HorizontalOptions="Start"/>
+                HorizontalOptions="Start">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#005A99" Offset="0.0"/>
+                    <!-- darker -->
+                    <GradientStop Color="#007BC0" Offset="0.5"/>
+                    <!-- main color -->
+                    <GradientStop Color="#33A1E0" Offset="1.0"/>
+                    <!-- lighter -->
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 

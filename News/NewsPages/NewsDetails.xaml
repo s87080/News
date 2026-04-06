@@ -4,6 +4,7 @@
              x:Class="News.NewsPages.NewsDetails"
              Background="{StaticResource BgColor}"
              Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
              Title="NewsDetails">
     <ScrollView>
     <!--MAIN GRID-->

@@ -49,7 +49,7 @@
                Text="All type of news all trusted sources for all type of people"
                TextColor="{StaticResource Black}"
                Margin="20,-35,20,0"
-               FontSize="12"
+               FontSize="13"
                HorizontalTextAlignment="Center"/>
 
         <!-- GET STARTED BUTTON -->
@@ -65,6 +65,16 @@
                 HorizontalOptions="Center"
                 Margin="0,20,0,0"
                 Clicked="GetStarted">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#005A99" Offset="0.0"/>
+                    <!-- darker -->
+                    <GradientStop Color="#007BC0" Offset="0.5"/>
+                    <!-- main color -->
+                    <GradientStop Color="#33A1E0" Offset="1.0"/>
+                    <!-- lighter -->
+                </LinearGradientBrush>
+            </Button.Background>
 
             <Button.Shadow>
                 <Shadow Brush="#40000000"

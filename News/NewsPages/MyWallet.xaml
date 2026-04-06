@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.NewsPages.MyWallet"
+             Title="MyWallet"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource BgColor}">
+    <ScrollView>
+        <Grid Padding="15"
+           RowSpacing="20"
+           RowDefinitions="Auto,Auto,Auto,Auto,*">
+
+            <!-- 🔷 HEADER -->
+            <Grid Grid.Row="0" ColumnDefinitions="*,Auto">
+                <Label Text="My Wallet"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    VerticalOptions="Center"/>
+
+                <Image Source="bell.png"
+                    HeightRequest="24"
+                    WidthRequest="24"
+                    Grid.Column="1"
+                    VerticalOptions="Center"/>
+            </Grid>
+
+            <!-- 🔷 BALANCE CARD -->
+            <Frame Grid.Row="1"
+                CornerRadius="25"
+                Padding="22"
+                HasShadow="True">
+
+                <Frame.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#007BC0" Offset="0"/>
+                        <GradientStop Color="#00AEEF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+
+                <Grid RowDefinitions="Auto,Auto,Auto">
+
+                    <Label Text="₹ 1,250.00"
+                        FontSize="34"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        HorizontalOptions="Center"/>
+
+                    <Label Text="Available Balance"
+                        Grid.Row="1"
+                        TextColor="White"
+                        Opacity="0.85"
+                        HorizontalOptions="Center"/>
+
+                    <Grid Grid.Row="2"
+                       ColumnDefinitions="*,*"
+                       ColumnSpacing="12"
+                       Margin="0,18,0,0">
+
+                        <Button Text="+ Add Money"
+                             BackgroundColor="White"
+                             TextColor="#007BC0"
+                             CornerRadius="25"
+                             HeightRequest="45"/>
+
+                        <Button Text="Withdraw"
+                             Grid.Column="1"
+                             BackgroundColor="#004A75"
+                             TextColor="White"
+                             CornerRadius="25"
+                             HeightRequest="45"/>
+                    </Grid>
+
+                </Grid>
+            </Frame>
+
+            <!-- 🔷 QUICK ACTIONS -->
+            <Grid Grid.Row="2"
+               ColumnDefinitions="*,*,*"
+               ColumnSpacing="12">
+
+                <!-- Add Money -->
+                <Frame CornerRadius="18"
+                    Padding="12"
+                    HasShadow="True"
+                    BackgroundColor="#E3F2FD">
+                    <VerticalStackLayout Spacing="6" HorizontalOptions="Center">
+                        <Image Source="add.png" HeightRequest="30"/>
+                        <Label Text="Add Money"
+                            FontSize="12"
+                            TextColor="#007BC0"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Rewards -->
+                <Frame Grid.Column="1"
+                    CornerRadius="18"
+                    Padding="12"
+                    HasShadow="True"
+                    BackgroundColor="#FFF3E0">
+                    <VerticalStackLayout Spacing="6" HorizontalOptions="Center">
+                        <Image Source="gift.png" HeightRequest="30"/>
+                        <Label Text="Rewards"
+                            FontSize="12"
+                            TextColor="#FB8C00"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Cards -->
+                <Frame Grid.Column="2"
+                    CornerRadius="18"
+                    Padding="12"
+                    HasShadow="True"
+                    BackgroundColor="#E8F5E9">
+                    <VerticalStackLayout Spacing="6" HorizontalOptions="Center">
+                        <Image Source="creditcard.png" HeightRequest="30"/>
+                        <Label Text="Cards"
+                            FontSize="12"
+                            TextColor="#2E7D32"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </Grid>
+
+            <!-- 🔷 TITLE -->
+            <Label Grid.Row="3"
+                Text="Recent Transactions"
+                
+                FontSize="18"
+                FontAttributes="Bold"
+                Margin="5,5,0,0"
+                TextColor="Black"/>
+
+            <!-- 🔷 TRANSACTIONS -->
+            <CollectionView Grid.Row="4">
+
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>+ ₹500 Added</x:String>
+                        <x:String>- ₹200 Subscription</x:String>
+                        <x:String>+ ₹1000 Added</x:String>
+                        <x:String>- ₹150 Recharge</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="15"
+                            Margin="0,6"
+                            Padding="0"
+                            BackgroundColor="#f7f9fa"
+                            HasShadow="True">
+
+                            <Grid Padding="12"
+                               ColumnDefinitions="Auto,*,Auto">
+
+                                <Image Source="money.png"
+                                    HeightRequest="22"
+                                    WidthRequest="22"
+                                    VerticalOptions="Center"
+                                    Margin="10,0,8,0"/>
+
+                                <VerticalStackLayout Grid.Column="1" Margin="10,0">
+                                    <Label Text="{Binding .}"
+                                        FontSize="14"
+                                        TextColor="Black"
+                                        Opacity="0.8"/>
+                                    <Label Text="Today"
+                                        FontSize="12"
+                                        Opacity="0.6"
+                                        TextColor="Black"/>
+                                </VerticalStackLayout>
+
+                                <!-- Dynamic Color Feel -->
+                                <Label Text="{Binding .}"
+                                    Grid.Column="2"
+                                    FontAttributes="Bold"
+                                    VerticalOptions="Center"
+                                    Opacity="0.5"
+                                    TextColor="Green"/>
+                            </Grid>
+
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

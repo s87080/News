@@ -3,76 +3,70 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="News.NewsPages.SelectCity"
              Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
              BackgroundColor="{StaticResource BgColor}"
              Title="SelectCity"
              Shell.TabBarIsVisible="False">
    
         <Grid RowDefinitions="Auto,Auto,*,Auto">
-          <Frame CornerRadius="25"
-               Grid.Row="0"
-               BackgroundColor="{StaticResource SearchBg}"
-               Padding="8,8"
-               HasShadow="False"
-               Margin="10,10">
+             <Frame CornerRadius="25"
+                    HeightRequest="50"
+                    Grid.Row="0"
+                    BackgroundColor="{StaticResource SearchBg}"
+                    Padding="8,0"
+                    HasShadow="False"
+                    Margin="8,8">
 
-            <Grid ColumnDefinitions="Auto,*"
-                  VerticalOptions="Center">
+                 <Grid ColumnDefinitions="Auto,*"
+                       VerticalOptions="Center">
 
-                <!-- SEARCH ICON -->
-                <Image Source="search.png"
+                      <!-- SEARCH ICON -->
+                       <Image Source="search.png"
                        WidthRequest="20"
                        HeightRequest="20"
                        VerticalOptions="Center"
                        Margin="5,0"/>
 
-                <!-- SEARCH ENTRY -->
-                <Entry Grid.Column="1"
+                       <!-- SEARCH ENTRY -->
+                       <Entry Grid.Column="1"
                        Placeholder="Search city..."
                        BackgroundColor="Transparent"
                        FontSize="16"
-                       Margin="10,0,0,0"/>
+                       Margin="10,0,0,0"
+                       TextColor="Black"/>
 
-            </Grid>
-            
-
-          </Frame>
-            <BoxView HeightRequest="1"
+                 </Grid>
+             </Frame>
+                     <BoxView HeightRequest="1"
                      Grid.Row="1"/>
-                <Grid Grid.Row="2" Padding="15">
-                    <CollectionView x:Name="CityData"
-                            >
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                 <Grid RowDefinitions="Auto,Auto" >
-                           
-                                        <HorizontalStackLayout Grid.Row="0"
+            <Grid Grid.Row="2" Padding="15">
+               <CollectionView x:Name="CityData" >
+                    <CollectionView.ItemTemplate>
+                       <DataTemplate>
+                           <Grid RowDefinitions="Auto,Auto" >
+
+                                  <HorizontalStackLayout Grid.Row="0"
                                                Spacing="10"
                                                Padding="10">
-                                            <Image Source="mouse.png" 
+                                         <Image Source="mouse.png" 
                                                     HeightRequest="22"
                                                     WidthRequest="22">
-                                
-                                            </Image>
-                                         <Label
+
+                                         </Image>
+                                            <Label
                                             Text="{Binding CityName}"
                                             TextColor="Black"/>
-                                            
-                                        </HorizontalStackLayout>
-                                            <BoxView Grid.Row="1"
-                                             HeightRequest="1"
-                                            />
-                            
-                                 </Grid>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
 
+                                  </HorizontalStackLayout>
+                                  <BoxView Grid.Row="1"
+                                   HeightRequest="1"/>
+                           </Grid>
+                       </DataTemplate>
+                    </CollectionView.ItemTemplate>
+               </CollectionView>
+            </Grid>
 
-
-
-                </Grid>
-
-                <Button Grid.Row="3"
+              <Button Grid.Row="3"
                         Text="Next"
                         BackgroundColor="{StaticResource News}"
                         TextColor="White"
@@ -83,8 +77,17 @@
                         WidthRequest="150"
                         HorizontalOptions="Center"
                         Margin="0,20,0,0"
-                        Clicked="Next"
-                        >
+                        Clicked="Next">
+                    <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#005A99" Offset="0.0"/>
+                    <!-- darker -->
+                    <GradientStop Color="#007BC0" Offset="0.5"/>
+                    <!-- main color -->
+                    <GradientStop Color="#33A1E0" Offset="1.0"/>
+                    <!-- lighter -->
+                    </LinearGradientBrush>
+                    </Button.Background>
 
                         <Button.Shadow>
                             <Shadow Brush="#40000000"
@@ -93,7 +96,7 @@
                                     Opacity="0.8"/>
                         </Button.Shadow>
 
-                </Button>
+              </Button>
         </Grid>
         
         

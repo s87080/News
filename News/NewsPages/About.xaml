@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.NewsPages.About"
+             BackgroundColor="{StaticResource BgColor}"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             Title="About">
+
+    <Grid Padding="15"
+          RowDefinitions="Auto,*">
+
+        <!-- HEADER -->
+        <Label Grid.Row="0"
+               Text="About Us"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,10"
+               TextColor="Black"/>
+
+        <!-- CONTENT -->
+        <ScrollView Grid.Row="1">
+
+            <Grid RowSpacing="20"
+                  RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+
+                <!-- APP -->
+                <Frame Grid.Row="0"
+                       CornerRadius="15"
+                       Padding="15"
+                       BackgroundColor="White"
+                       HasShadow="True">
+
+                    <Grid RowDefinitions="Auto,Auto" RowSpacing="8">
+                        <Label Text="📰 News App"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource News}"/>
+
+                        <Label Grid.Row="1"
+                               Text="Stay updated with the latest news from around the world. Get real-time updates and breaking news instantly."
+                               TextColor="Black"/>
+                    </Grid>
+
+                </Frame>
+
+                <!-- MISSION -->
+                <Frame Grid.Row="1"
+                       CornerRadius="15"
+                       Padding="15"
+                       BackgroundColor="White"
+                       HasShadow="True">
+
+                    <Grid RowDefinitions="Auto,Auto" RowSpacing="8">
+                        <Label Text="🎯 Our Mission"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource News}"/>
+
+                        <Label Grid.Row="1"
+                               Text="We aim to deliver fast, accurate, and reliable news in a simple and user-friendly interface."
+                               TextColor="Black"/>
+                    </Grid>
+
+                </Frame>
+
+                <!-- FEATURES -->
+                <Frame Grid.Row="2"
+                       CornerRadius="15"
+                       Padding="15"
+                       BackgroundColor="White"
+                       HasShadow="True">
+
+                    <Grid RowDefinitions="Auto,Auto" RowSpacing="8">
+                        <Label Text="🚀 Features"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource News}"/>
+
+                        <Label Grid.Row="1"
+                               Text="• Latest News Updates&#10;• User Posts&#10;• Notifications&#10;• Easy Navigation"
+                               TextColor="Black"/>
+                    </Grid>
+
+                </Frame>
+
+                <!-- VERSION -->
+                <Frame Grid.Row="3"
+                       CornerRadius="15"
+                       Padding="15"
+                       BackgroundColor="White"
+                       HasShadow="True">
+
+                    <Grid RowDefinitions="Auto,Auto" RowSpacing="8">
+                        <Label Text="📱 App Version"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource News}"/>
+
+                        <Label Grid.Row="1"
+                               Text="Version 1.0.0"
+                               TextColor="Black"/>
+                    </Grid>
+
+                </Frame>
+
+                <!-- CONTACT -->
+                <Frame Grid.Row="4"
+                       CornerRadius="15"
+                       Padding="15"
+                       BackgroundColor="White"
+                       HasShadow="True">
+
+                    <Grid RowDefinitions="Auto,Auto" RowSpacing="8">
+                        <Label Text="📩 Contact Us"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource News}"/>
+
+                        <Label Grid.Row="1"
+                               Text="support@newsapp.com"
+                               TextColor="Black"/>
+                    </Grid>
+
+                </Frame>
+
+            </Grid>
+
+        </ScrollView>
+
+    </Grid>
+</ContentPage>

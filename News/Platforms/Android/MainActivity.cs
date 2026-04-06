@@ -33,7 +33,7 @@ namespace News
             }
 
             base.OnCreate(savedInstanceState);
-            Window.SetStatusBarColor(Android.Graphics.Color.ParseColor("#FFFFFF"));
+            Window.SetStatusBarColor(Android.Graphics.Color.ParseColor("white"));
             HandleIntent(Intent);
             CreateNotificationChannelIfNeeded();
         }

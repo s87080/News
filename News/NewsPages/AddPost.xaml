@@ -2,6 +2,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="News.NewsPages.AddPost"
+    NavigationPage.HasNavigationBar="False"
     BackgroundColor="{StaticResource BgColor}">
 
     <ScrollView>
@@ -17,7 +18,7 @@
                        CornerRadius="12"
                        BackgroundColor="{StaticResource labelBg}"
                        HasShadow="True"
-                       HorizontalOptions="Start"
+                       HorizontalOptions="Center"
                        VerticalOptions="Center">
 
                     <Grid RowDefinitions="Auto,Auto"
@@ -30,11 +31,13 @@
                                Text="+"
                                FontSize="40"
                                TextColor="#777777"
-                               HorizontalOptions="Center" />
+                               HorizontalOptions="Center" 
+                               Margin="0"/>
 
                         <!-- Text -->
                         <Label Grid.Row="1"
                                Text="Add Post Images"
+                               Margin="0,-10,0,0"
                                FontSize="14"
                                TextColor="#555555"
                                HorizontalOptions="Center" />
@@ -51,6 +54,7 @@
                    BackgroundColor="{StaticResource TabUnselected}">
                 <Entry Placeholder="Add Heading"
                        HeightRequest="45"
+                       TextColor="Black"
                        Margin="10,0"/>
             </Frame>
 
@@ -60,6 +64,7 @@
                    Padding="0"
                    BackgroundColor="{StaticResource TabUnselected}">
                 <Entry Placeholder="Add Tag"
+                       TextColor="Black"
                        HeightRequest="45"
                        Margin="10,0"/>
             </Frame>
@@ -71,6 +76,7 @@
                    BackgroundColor="{StaticResource TabUnselected}">
                 <Entry Placeholder="Category"
                        HeightRequest="45"
+                       TextColor="Black"
                        Margin="10,0"/>
             </Frame>
 
@@ -82,9 +88,10 @@
                 <Grid>
                     <Entry Placeholder="Add video link"
                            HeightRequest="45"
-                           Margin="10,0"/>
-
-                    <Label Text="▼"
+                           Margin="10,0"
+                           TextColor="Black"
+                           />
+                           <Label Text="▼"
                            HorizontalOptions="End"
                            VerticalOptions="Center"
                            Margin="0,0,10,0"/>
@@ -97,7 +104,8 @@
                    Padding="10"
                    BackgroundColor="{StaticResource TabUnselected}">
                 <Editor Placeholder="Write Article"
-                        HeightRequest="120"/>
+                        HeightRequest="120"
+                        TextColor="Black"/>
             </Frame>
 
             <!-- 🔷 POST BUTTON -->
@@ -113,6 +121,16 @@
                     HorizontalOptions="Center"
                     Margin="0,0,0,50"
                     Clicked="OnPostClicked">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#005A99" Offset="0.0"/>
+                        <!-- darker -->
+                        <GradientStop Color="#007BC0" Offset="0.5"/>
+                        <!-- main color -->
+                        <GradientStop Color="#33A1E0" Offset="1.0"/>
+                        <!-- lighter -->
+                    </LinearGradientBrush>
+                </Button.Background>
 
                 <Button.Shadow>
                     <Shadow Brush="#40000000"

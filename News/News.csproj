@@ -96,6 +96,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="NewsPages\About.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="NewsPages\AddPost.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -108,7 +111,13 @@
 	  <MauiXaml Update="NewsPages\MySetting.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="NewsPages\MyWallet.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="NewsPages\NewsDetails.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="NewsPages\Notifications.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="NewsPages\Password.xaml">
@@ -120,6 +129,9 @@
 	  <MauiXaml Update="NewsPages\Profile.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="NewsPages\Refer.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="NewsPages\SelectCity.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -129,10 +141,13 @@
 	  <MauiXaml Update="NewsPages\SignUp.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="NewsPages\TermConditions.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="NewsPages\VerifyPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="NewsPages\Wallet.xaml">
+	  <MauiXaml Update="NewsPages\WatchAdds.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Styles\AppColors.xaml">
@@ -143,6 +158,12 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Update="NewsPages\MyWallet.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </None>
+	</ItemGroup>
+
 	<PropertyGroup>
 	  <!-- Use short absolute paths to avoid MAX_PATH during restore/build -->
 	  <BaseIntermediateOutputPath>C:\tmp\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
@@ -151,11 +172,8 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios' Or $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">
-	  <!-- Use very short global short paths to avoid MAX_PATH when copying iOS xcframework resources -->
-	  <BaseOutputPath>C:\P\bin\</BaseOutputPath>
-	  <BaseIntermediateOutputPath>C:\P\obj\</BaseIntermediateOutputPath>
-
-	  <!-- Keep Output/Intermediate short (you can include $(MSBuildProjectName) if you prefer) -->
+	  <BaseOutputPath>D:\tmp\bin\</BaseOutputPath>
+	  <BaseIntermediateOutputPath>D:\tmp\obj\</BaseIntermediateOutputPath>
 	  <OutputPath>$(BaseOutputPath)$(Configuration)\</OutputPath>
 	  <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\</IntermediateOutputPath>
 	</PropertyGroup>

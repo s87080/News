@@ -11,21 +11,21 @@ public partial class MySetting : ContentPage
 	}
     private void MyProfile(object sender, EventArgs e)
 	{
-        bool isSelected = false;
+        //bool isSelected = false;
 
-        isSelected = !isSelected;
+        //isSelected = !isSelected;
 
-        if (isSelected)
-        {
-            MyBorder.BackgroundColor = Color.FromArgb("#007BC0");
+        //if (isSelected)
+        //{
+        //    MyBorder.BackgroundColor = Color.FromArgb("#007BC0");
             
-            MyBorder.Stroke = Color.FromArgb("#007BC0");
-        }
-        else
-        {
-            MyBorder.BackgroundColor = Colors.White;
-            MyBorder.Stroke = Colors.Black;
-        }
+        //    MyBorder.Stroke = Color.FromArgb("#007BC0");
+        //}
+        //else
+        //{
+        //    MyBorder.BackgroundColor = Colors.White;
+        //    MyBorder.Stroke = Colors.Black;
+        //}
     
     Navigation.PushAsync(new Profile());
 	}
@@ -44,7 +44,7 @@ public partial class MySetting : ContentPage
     }
     private void OnWallet(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new Wallet());
+        Navigation.PushAsync(new MyWallet());
     }
     private void MyPostTapped(object sender, EventArgs e)
     {
@@ -53,6 +53,26 @@ public partial class MySetting : ContentPage
     private void BoostTapped(object sender, EventArgs e)
     {
         Navigation.PushAsync(new BoostPostxaml());
+    }
+    private void TappedNotifications(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new Notifications());
+    }
+    private void Conditions(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new TermConditions());
+    }
+    private void AboutTapped(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new About());
+    }
+    private void WatchAddsTapped(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new WatchAdds());
+    }
+    private void ReferTapped(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new Refer());
     }
 
 }
